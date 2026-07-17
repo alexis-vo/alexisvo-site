@@ -7,8 +7,13 @@ export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
 
   return {
@@ -17,8 +22,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -58,7 +68,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           rel="noopener noreferrer"
           className="text-sm font-medium text-black hover:underline w-fit"
         >
-          Voir le code source →
+          Voir le projet →
         </a>
       )}
 

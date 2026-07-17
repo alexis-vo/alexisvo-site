@@ -9,7 +9,7 @@ export default function About() {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
           <span className="text-sm text-gray-500 sm:w-40 shrink-0">
-            2024 — présent
+            2026 — aujourd'hui
           </span>
           <div>
             <h3 className="font-semibold text-gray-900">
@@ -24,14 +24,14 @@ export default function About() {
 
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
           <span className="text-sm text-gray-500 sm:w-40 shrink-0">
-            2022 — 2024
+            2023 — 2026
           </span>
           <div>
             <h3 className="font-semibold text-gray-900">
-              Double Licence Mathématiques-Informatique
+              Université Paris-Saclay — Double Licence Mathématiques-Informatique
             </h3>
             <p className="text-gray-600 mt-1">
-              Université Paris-Saclay. Formation exigeante alliant
+              Formation exigeante alliant
               mathématiques rigoureuses et fondamentaux en informatique.
             </p>
           </div>
@@ -43,11 +43,11 @@ export default function About() {
           </span>
           <div>
             <h3 className="font-semibold text-gray-900">
-              École Polytechnique
+              École polytechnique
             </h3>
             <p className="text-gray-600 mt-1">
-              Finance quantitative (modélisation Black-Scholes, Monte Carlo)
-              et data science / humanités numériques (projet Mus&apos;X).
+              - Finance quantitative au CMAP : modélisation des modèles Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein<br></br>
+              - Data science en humanités numériques au Mus&apos;X.
             </p>
           </div>
         </div>

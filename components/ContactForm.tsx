@@ -85,7 +85,7 @@ export default function ContactForm() {
       )}
       {status === "error" && (
         <p className="text-red-600 text-sm">
-          Une erreur est survenue, réessaie plus tard.
+          Une erreur est survenue, veuillez réessayer plus tard.
         </p>
       )}
     </form>

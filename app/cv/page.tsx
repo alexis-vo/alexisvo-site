@@ -17,7 +17,7 @@ export default function CvPage() {
       </div>
 
       
-     <a   href="/cv.pdf"
+     <a   href="/cv_alexis-vo.pdf"
         download
         className="px-6 py-3 rounded-lg bg-black text-white hover:bg-gray-800 transition-colors"
       >
@@ -26,11 +26,19 @@ export default function CvPage() {
 
       <div className="w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm">
         <iframe
-          src="/cv.pdf"
+          src="/cv_alexis-vo.pdf"
           className="w-full h-[80vh]"
           title="Aperçu du CV d'Alexis Vo"
         />
       </div>
+
+      <p className="text-sm text-gray-500 text-center max-w-md">
+        Cette version présente l&apos;essentiel de mon profil.{" "}
+        <a href="/contact" className="underline hover:text-gray-800">
+            Contactez-moi
+        </a>{" "}
+        pour toute question ou pour échanger davantage sur mon parcours.
+        </p>
     </section>
   );
 }

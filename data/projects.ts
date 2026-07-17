@@ -11,14 +11,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "site-personnel",
-    title: "Site personnel",
-    description:
-      "Portfolio développé de A à Z avec Next.js, TypeScript et Tailwind CSS, déployé sur Vercel.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    image: "",
-    poster: "/posters/site-personnel.pdf",
-    link: "https://github.com/TON_PSEUDO/alexisvo-site",
+  slug: "blaise-alumni",
+  title: "Groupe Blaise Alumni",
+  description:
+    "Groupe des anciens élèves et étudiants du lycée Blaise Pascal d'Orsay. Accompagnement personnalisé, conception de supports pédagogiques, préparations aux examens et concours, réseautage...",
+  stack: ["Entrepreunariat", "Communication", "Création de contenu", "Réseautage"],
+  image: "/images/projects/blaise-alumni.png",
+  poster: "/posters/blaise-alumni.pdf",
+  link: "https://linktr.ee/blaise.alumni",
   },
   {
     slug: "serveur-nextcloud",

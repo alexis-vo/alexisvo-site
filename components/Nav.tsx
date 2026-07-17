@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <header className="w-full px-6 md:px-20 py-5 flex justify-between items-center border-b border-gray-100">
       <Link href="/" className="font-semibold text-lg tracking-tight">
-        Alexis Vo
+        Alexis VO
       </Link>
 
       <nav className="flex gap-6 text-sm">

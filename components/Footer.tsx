@@ -4,11 +4,11 @@ export default function Footer() {
 
   return (
     <footer className="w-full px-6 md:px-20 py-8 mt-20 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-      <p>© {year} Alexis Vo. Tous droits réservés.</p>
+      <p>© {year} Alexis VO. Tous droits réservés.</p>
 
       <div className="flex gap-5">
         
-        <a  href="https://github.com/alexisvo"
+        <a  href="https://github.com/alexis-vo"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-gray-800 transition-colors"

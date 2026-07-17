@@ -5,15 +5,15 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Alexis Vo — Ingénieur CentraleSupélec | Maths, IA, Finance",
+  title: "Alexis VO | CentraleSupélec",
   description:
-    "Portfolio d'Alexis Vo, étudiant ingénieur à CentraleSupélec, spécialisé en mathématiques financières, IA et finance quantitative.",
+    "Portfolio d'Alexis VO, élève ingénieur à CentraleSupélec, spécialisé en mathématiques financières, IA et finance quantitative.",
   openGraph: {
-    title: "Alexis Vo",
+    title: "Alexis VO",
     description:
-      "Étudiant ingénieur à CentraleSupélec, maths financières, IA et finance quantitative.",
+      "Élève ingénieur à CentraleSupélec, maths financières, IA et finance quantitative.",
     url: "https://alexisvo.fr",
-    siteName: "Alexis Vo",
+    siteName: "Alexis VO",
     locale: "fr_FR",
     type: "website",
   },
