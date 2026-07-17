@@ -8,7 +8,7 @@ export default function Footer() {
 
       <div className="flex gap-5">
         
-          href="https://github.com/alexisvo"
+        <a  href="https://github.com/alexisvo"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-gray-800 transition-colors"
@@ -16,7 +16,7 @@ export default function Footer() {
           GitHub
         </a>
         
-          href="https://linkedin.com/in/alexis-vo"
+        <a  href="https://linkedin.com/in/alexis-vo"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-gray-800 transition-colors"
@@ -24,7 +24,7 @@ export default function Footer() {
           LinkedIn
         </a>
         
-          href="mailto:alexis.vo@student-cs.fr"
+        <a  href="mailto:alexis.vo@student-cs.fr"
           className="hover:text-gray-800 transition-colors"
         >
           Email

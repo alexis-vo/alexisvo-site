@@ -24,6 +24,9 @@ export default function Hero() {
         <div className="mt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           
           <a  href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
             className="px-6 py-3 rounded-lg bg-black text-white hover:bg-gray-800 transition-colors text-center"
           >
             Télécharger mon CV
