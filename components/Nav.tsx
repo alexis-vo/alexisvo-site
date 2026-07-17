@@ -15,9 +15,13 @@ export default function Nav() {
         <Link href="/cv" className="hover:text-gray-500 transition-colors">
           CV
         </Link>
+        <Link href="/projects" className="hover:text-gray-500 transition-colors">
+          Projets
+        </Link>
         <Link href="/contact" className="hover:text-gray-500 transition-colors">
           Contact
         </Link>
+        
       </nav>
     </header>
   );
