@@ -10,8 +10,10 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <section className="px-6 md:px-20 py-20 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 mb-3">Projets</h1>
-      <p className="text-gray-600 mb-12">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        Projets
+      </h1>
+      <p className="text-gray-600 dark:text-gray-300 mb-12">
         Une sélection de projets techniques et personnels.
       </p>
 

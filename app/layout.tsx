@@ -19,14 +19,27 @@ export const metadata: Metadata = {
   },
 };
 
+// app/layout.tsx
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr">
-      <body className="antialiased flex flex-col min-h-screen">
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const stored = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const shouldBeDark = stored === 'dark' || (!stored && prefersDark);
+                if (shouldBeDark) document.documentElement.classList.add('dark');
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="antialiased flex flex-col min-h-screen bg-white dark:bg-black transition-colors">
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
