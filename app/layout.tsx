@@ -1,10 +1,12 @@
 // app/layout.tsx
 import type { Metadata } from "next";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Alexis VO | CentraleSupélec",
   description:
     "Portfolio d'Alexis VO, élève ingénieur à CentraleSupélec, spécialisé en mathématiques financières, IA et finance quantitative.",
@@ -12,8 +14,8 @@ export const metadata: Metadata = {
     title: "Alexis VO",
     description:
       "Élève ingénieur à CentraleSupélec, maths financières, IA et finance quantitative.",
-    url: "https://alexisvo.fr",
-    siteName: "Alexis VO",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     locale: "fr_FR",
     type: "website",
   },

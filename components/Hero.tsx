@@ -2,7 +2,7 @@
 export default function Hero() {
   return (
     <section className="min-h-[80vh] flex items-center justify-center px-6 md:px-12">
-      <div className="w-full max-w-2xl text-center flex flex-col items-center gap-6 py-16 px-8 md:px-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm bg-white dark:bg-zinc-900">
+      <div className="hero-animate w-full max-w-2xl text-center flex flex-col items-center gap-6 py-16 px-8 md:px-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm bg-white dark:bg-zinc-900">
         <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
           Étudiant ingénieur • CentraleSupélec
         </p>
@@ -22,8 +22,8 @@ export default function Hero() {
         </p>
 
         <div className="mt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          
-          <a  href="/cv.pdf"
+
+          <a href="/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download
@@ -31,8 +31,8 @@ export default function Hero() {
           >
             Télécharger mon CV
           </a>
-          
-          <a  href="/contact"
+
+          <a href="/contact"
             className="px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center dark:text-white"
           >
             Me contacter

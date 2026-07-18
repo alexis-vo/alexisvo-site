@@ -1,5 +1,6 @@
 // app/projects/page.tsx
 import ProjectCard from "@/components/ProjectCard";
+import FadeIn from "@/components/FadeIn";
 import { projects } from "@/data/projects";
 
 export const metadata = {
@@ -10,16 +11,20 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <section className="px-6 md:px-20 py-20 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-        Projets
-      </h1>
-      <p className="text-gray-600 dark:text-gray-300 mb-12">
-        Une sélection de projets techniques et personnels.
-      </p>
+      <FadeIn>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+          Projets
+        </h1>
+        <p className="text-gray-600 dark:text-gray-300 mb-12">
+          Une sélection de projets techniques et personnels.
+        </p>
+      </FadeIn>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+        {projects.map((project, index) => (
+          <FadeIn key={project.slug} delay={index * 100}>
+            <ProjectCard project={project} />
+          </FadeIn>
         ))}
       </div>
     </section>
