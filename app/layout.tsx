@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Alexis VO | CentraleSupélec",
+  title: "Alexis VO — Élève ingénieur CentraleSupélec, Maths & Finance",
   description:
     "Portfolio d'Alexis VO, élève ingénieur à CentraleSupélec, spécialisé en mathématiques financières, IA et finance quantitative.",
   openGraph: {
