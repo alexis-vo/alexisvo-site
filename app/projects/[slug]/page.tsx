@@ -73,10 +73,16 @@ export default async function ProjectPage({
       )}
 
       {project.poster && (
-        <div className="w-full border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-sm">
+        <div
+          className={`w-full mx-auto border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-sm ${
+            project.posterOrientation === "landscape"
+              ? "aspect-[1.414/1] max-w-4xl"
+              : "aspect-[1/1.414] max-w-2xl"
+          }`}
+        >
           <iframe
             src={project.poster}
-            className="w-full h-[85vh]"
+            className="w-full h-full"
             title={`Poster — ${project.title}`}
           />
         </div>

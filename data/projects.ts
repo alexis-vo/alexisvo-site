@@ -6,6 +6,7 @@ export type Project = {
   stack: string[];
   image: string;      // miniature pour la carte (peut être vide = placeholder)
   poster?: string;     // chemin vers le PDF du poster
+  posterOrientation?: "portrait" | "landscape";
   link?: string;        // lien externe optionnel (GitHub, démo...)
 };
 
@@ -18,6 +19,7 @@ export const projects: Project[] = [
   stack: ["Entrepreunariat", "Communication", "Création de contenu", "Réseautage"],
   image: "/images/projects/blaise-alumni.png",
   poster: "/posters/blaise-alumni.pdf",
+  posterOrientation: "landscape",
   link: "https://linktr.ee/blaise.alumni",
   },
   {
@@ -26,7 +28,8 @@ export const projects: Project[] = [
     description:
       "Configuration d'un serveur Ubuntu avec Nextcloud (NAS personnel) et WireGuard pour un accès distant sécurisé.",
     stack: ["Ubuntu Server", "Nextcloud", "WireGuard"],
-    image: "",
-    poster: "/posters/serveur-nextcloud.pdf",
+    image: "/images/projects/nextcloud.png",
+    poster: "/posters/nextcloud-wireguard.pdf",
+    posterOrientation: "landscape",
   },
 ];

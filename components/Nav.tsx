@@ -1,29 +1,101 @@
 // components/Nav.tsx
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
-export default function Nav() {
-  return (
-    <header className="w-full px-6 md:px-20 py-5 flex justify-between items-center border-b border-gray-100 dark:border-gray-800 dark:bg-black">
-      <Link href="/" className="font-semibold text-lg tracking-tight dark:text-white">
-        Alexis Vo
-      </Link>
+const links = [
+  { href: "/", label: "Accueil" },
+  { href: "/#a-propos", label: "À propos" },
+  { href: "/projects", label: "Projets" },
+  { href: "/cv", label: "CV" },
+  { href: "/blog", label: "Notes" },
+  { href: "/contact", label: "Contact" },
+];
 
-      <nav className="flex gap-6 items-center text-sm">
-        <Link href="/" className="hover:text-gray-500 transition-colors dark:text-gray-300">
-          Accueil
+export default function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-gray-100 dark:border-gray-800 px-6 md:px-20 py-5">
+      <div className="flex justify-between items-center">
+        <Link
+          href="/"
+          className="text-xl tracking-wide text-gray-900 dark:text-white"
+          style={{ fontFamily: "var(--font-playfair)" }}
+        >
+          Alexis VO
         </Link>
-        <Link href="/projects" className="hover:text-gray-500 transition-colors dark:text-gray-300">
-          Projets
-        </Link>
-        <Link href="/cv" className="hover:text-gray-500 transition-colors dark:text-gray-300">
-          CV
-        </Link>
-        <Link href="/contact" className="hover:text-gray-500 transition-colors dark:text-gray-300">
-          Contact
-        </Link>
-        <ThemeToggle />
-      </nav>
+
+        {/* Nav desktop */}
+        <nav className="hidden md:flex items-center gap-6">
+          {links.map((link, index) => (
+            <span key={link.href} className="flex items-center gap-6">
+              <Link
+                href={link.href}
+                className="group relative text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+              >
+                {link.label}
+                <span className="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full" />
+              </Link>
+              {index < links.length - 1 && (
+                <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
+              )}
+            </span>
+          ))}
+          <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
+          <ThemeToggle />
+        </nav>
+
+        {/* Bouton hamburger mobile */}
+        <div className="flex md:hidden items-center gap-4">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
+            className="text-gray-700 dark:text-gray-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {isOpen ? (
+                <path d="M18 6 6 18M6 6l12 12" />
+              ) : (
+                <>
+                  <path d="M4 6h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 18h16" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Menu mobile déplié */}
+      {isOpen && (
+        <nav className="md:hidden flex flex-col gap-4 mt-6 pb-2">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }

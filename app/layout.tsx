@@ -1,13 +1,21 @@
 // app/layout.tsx
 import type { Metadata } from "next";
+import { Playfair_Display } from "next/font/google";
+
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  style: ["italic"],
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Alexis VO — Élève ingénieur CentraleSupélec, Maths & Finance",
+  title: "Alexis VO - CentraleSupélec",
   description:
     "Portfolio d'Alexis VO, élève ingénieur à CentraleSupélec, spécialisé en mathématiques financières, IA et finance quantitative.",
   openGraph: {
@@ -21,7 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-// app/layout.tsx
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -41,7 +48,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased flex flex-col min-h-screen bg-white dark:bg-black transition-colors">
+      <body
+        className={`${playfair.variable} antialiased flex flex-col min-h-screen transition-colors`}
+      >
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

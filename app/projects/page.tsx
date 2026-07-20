@@ -1,5 +1,5 @@
 // app/projects/page.tsx
-import ProjectCard from "@/components/ProjectCard";
+import ProjectsList from "@/components/ProjectsList";
 import FadeIn from "@/components/FadeIn";
 import { projects } from "@/data/projects";
 
@@ -20,13 +20,7 @@ export default function ProjectsPage() {
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <FadeIn key={project.slug} delay={index * 100}>
-            <ProjectCard project={project} />
-          </FadeIn>
-        ))}
-      </div>
+      <ProjectsList projects={projects} />
     </section>
   );
 }

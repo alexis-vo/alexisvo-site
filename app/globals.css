@@ -40,3 +40,13 @@
     animation: fadeInUp 0.8s ease-out;
   }
 }
+
+@layer base {
+  body {
+    background: radial-gradient(circle at top, #fafaf8 0%, #f2f1ee 100%);
+  }
+
+  .dark body {
+    background: radial-gradient(circle at top, #18181b 0%, #0a0a0b 100%);
+  }
+}

@@ -1,4 +1,6 @@
 // app/cv/page.tsx
+import CvDownloadButton from "@/components/CvDownloadButton";
+
 export const metadata = {
   title: "CV — Alexis VO",
   description: "Consulter et télécharger mon CV.",
@@ -16,15 +18,7 @@ export default function CvPage() {
         </p>
       </div>
 
-      
-      <a  href="/cv_alexis-vo.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        download
-        className="px-6 py-3 rounded-lg bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-      >
-        Télécharger le PDF
-      </a>
+      <CvDownloadButton />
 
       <div className="w-full border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-sm">
         <iframe

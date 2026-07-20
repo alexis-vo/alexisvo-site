@@ -1,42 +1,60 @@
 // components/Hero.tsx
+"use client";
+
+import Image from "next/image";
+import SocialLinks from "./SocialLinks";
+
 export default function Hero() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center px-6 md:px-12">
-      <div className="hero-animate w-full max-w-2xl text-center flex flex-col items-center gap-6 py-16 px-8 md:px-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm bg-white dark:bg-zinc-900">
-        <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
-          Étudiant ingénieur • CentraleSupélec
-        </p>
+    <section className="min-h-[calc(100vh-73px)] flex items-center justify-center px-6 md:px-12">
+      <div className="hero-animate w-full max-w-3xl flex flex-col sm:flex-row items-center gap-8 sm:gap-12 py-16 px-8 md:px-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm bg-white dark:bg-zinc-900">
+        <div className="relative w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-full overflow-hidden border border-gray-200 dark:border-gray-800">
+          <Image
+            src="/images/profile.png"
+            alt="Photo d'Alexis Vo"
+            fill
+            className="object-cover"
+          />
+        </div>
 
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
-          Alexis Vo
-        </h1>
+        <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6">
+          <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
+            Étudiant ingénieur • CentraleSupélec
+          </p>
 
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Passionné de mathématiques, IA et finance quantitative
-        </p>
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
+            Alexis VO
+          </h1>
 
-        <p className="text-base text-gray-500 dark:text-gray-400 max-w-xl">
-          De la Double Licence Mathématiques-Informatique à CentraleSupélec, en
-          passant par des stages en finance quantitative et data science à
-          l&apos;École Polytechnique.
-        </p>
+          <p className="text-xl italic text-gray-600 dark:text-gray-300" style={{ fontFamily: "var(--font-playfair)" }}>
+            « Comprendre, modéliser, décider. »
+          </p>
 
-        <div className="mt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <div className="mt-2 flex items-center gap-4">
 
-          <a href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className="px-6 py-3 rounded-lg bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors text-center"
-          >
-            Télécharger mon CV
-          </a>
+            <button
+              onClick={() => {
+                window.open("/cv_alexis-vo.pdf", "_blank", "noopener,noreferrer");
 
-          <a href="/contact"
-            className="px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center dark:text-white"
-          >
-            Me contacter
-          </a>
+                const link = document.createElement("a");
+                link.href = "/cv_alexis-vo.pdf";
+                link.download = "CV_Alexis_VO.pdf";
+                link.click();
+              }}
+              aria-label="Télécharger mon CV"
+              className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors overflow-hidden"
+            >
+              <Image
+                src="/images/cv-icon.png"
+                alt="Télécharger mon CV"
+                width={24}
+                height={24}
+                className="dark:invert"
+              />
+            </button>
+
+            <SocialLinks />
+          </div>
         </div>
       </div>
     </section>

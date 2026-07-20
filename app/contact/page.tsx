@@ -1,9 +1,10 @@
 // app/contact/page.tsx
 import ContactForm from "@/components/ContactForm";
+import SocialLinks from "@/components/SocialLinks";
 
 export const metadata = {
   title: "Contact — Alexis Vo",
-  description: "Contactez Alexis Vo pour toute opportunité professionnelle.",
+  description: "Contactez moi pour toute opportunité professionnelle.",
 };
 
 export default function ContactPage() {
@@ -13,12 +14,11 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
           Me contacter
         </h1>
-        <p className="text-gray-600 dark:text-gray-300">
-          Une question, une opportunité ? N&apos;hésitez pas à m&apos;écrire.
-        </p>
       </div>
 
       <ContactForm />
+
+      <SocialLinks />
     </section>
   );
 }
