@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 
+import PersonSchema from "@/components/PersonSchema";
+
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -51,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} antialiased flex flex-col min-h-screen transition-colors`}
       >
+        <PersonSchema />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
