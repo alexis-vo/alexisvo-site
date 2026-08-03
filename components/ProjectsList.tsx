@@ -6,14 +6,25 @@ import { Project } from "@/data/projects";
 import ProjectCard from "./ProjectCard";
 import FadeIn from "./FadeIn";
 
+const VISIBLE_TAGS_COUNT = 8;
+
 export default function ProjectsList({ projects }: { projects: Project[] }) {
   const [activeTags, setActiveTags] = useState<string[]>([]);
+  const [showAllTags, setShowAllTags] = useState(false);
 
-  const allTags = useMemo(() => {
-    const tags = new Set<string>();
-    projects.forEach((p) => p.stack.forEach((t) => tags.add(t)));
-    return Array.from(tags).sort();
+  const sortedTags = useMemo(() => {
+    const counts = new Map<string, number>();
+    projects.forEach((p) =>
+      p.stack.forEach((t) => counts.set(t, (counts.get(t) ?? 0) + 1))
+    );
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag]) => tag);
   }, [projects]);
+
+  const visibleTags = showAllTags
+    ? sortedTags
+    : sortedTags.slice(0, VISIBLE_TAGS_COUNT);
 
   function toggleTag(tag: string) {
     setActiveTags((prev) =>
@@ -28,7 +39,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
   return (
     <div>
-      <div className="flex gap-2 mb-10 flex-wrap">
+      <div className="flex gap-2 mb-10 flex-wrap items-center">
         <button
           onClick={() => setActiveTags([])}
           className={`px-4 py-2 rounded-full text-sm border transition-colors ${
@@ -40,7 +51,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
           Tous
         </button>
 
-        {allTags.map((tag) => (
+        {visibleTags.map((tag) => (
           <button
             key={tag}
             onClick={() => toggleTag(tag)}
@@ -53,6 +64,15 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
             {tag}
           </button>
         ))}
+
+        {sortedTags.length > VISIBLE_TAGS_COUNT && (
+          <button
+            onClick={() => setShowAllTags(!showAllTags)}
+            className="px-4 py-2 rounded-full text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors underline"
+          >
+            {showAllTags ? "Voir moins" : `+${sortedTags.length - VISIBLE_TAGS_COUNT} autres`}
+          </button>
+        )}
       </div>
 
       {filtered.length === 0 ? (
