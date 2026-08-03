@@ -16,7 +16,7 @@ export default function ProjectsPage() {
           Projets
         </h1>
         <p className="text-gray-600 dark:text-gray-300 mb-12">
-          Une sélection de projets techniques et personnels.
+          Une sélection de projets académiques, techniques et personnels.
         </p>
       </FadeIn>
 
