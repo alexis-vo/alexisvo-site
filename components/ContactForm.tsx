@@ -2,9 +2,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const t = useTranslations("contact");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -35,7 +37,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full max-w-lg">
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="text-sm text-gray-600 dark:text-gray-300">
-          Nom
+          {t("name")}
         </label>
         <input
           type="text"
@@ -48,7 +50,7 @@ export default function ContactForm() {
 
       <div className="flex flex-col gap-1">
         <label htmlFor="email" className="text-sm text-gray-600 dark:text-gray-300">
-          Email
+          {t("email")}
         </label>
         <input
           type="email"
@@ -61,7 +63,7 @@ export default function ContactForm() {
 
       <div className="flex flex-col gap-1">
         <label htmlFor="message" className="text-sm text-gray-600 dark:text-gray-300">
-          Message
+          {t("message")}
         </label>
         <textarea
           id="message"
@@ -77,16 +79,14 @@ export default function ContactForm() {
         disabled={status === "loading"}
         className="px-6 py-3 rounded-lg bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-50"
       >
-        {status === "loading" ? "Envoi..." : "Envoyer"}
+        {status === "loading" ? t("sending") : t("send")}
       </button>
 
       {status === "success" && (
-        <p className="text-green-600 dark:text-green-400 text-sm">Message envoyé avec succès !</p>
+        <p className="text-green-600 dark:text-green-400 text-sm">{t("success")}</p>
       )}
       {status === "error" && (
-        <p className="text-red-600 dark:text-red-400 text-sm">
-          Une erreur est survenue, veuillez réessayer plus tard.
-        </p>
+        <p className="text-red-600 dark:text-red-400 text-sm">{t("error")}</p>
       )}
     </form>
   );

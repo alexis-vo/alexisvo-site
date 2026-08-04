@@ -22,16 +22,6 @@
     "subtitle": "Preview below, or download directly as PDF.",
     "download": "Download PDF"
   },
-  "contact": {
-    "title": "Get in Touch",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send",
-    "sending": "Sending...",
-    "success": "Message sent successfully!",
-    "error": "An error occurred, please try again later."
-  },
   "projects": {
     "title": "Projects",
     "subtitle": "A selection of technical and personal projects.",
@@ -51,9 +41,6 @@
     "colles": "Study Sheets",
     "noResults": "No content in this category yet.",
     "backToBlog": "← Back to notes"
-  },
-  "footer": {
-    "rights": "All rights reserved."
   },
   "aboutMe": {
     "title": "About",
@@ -77,5 +64,18 @@
       "text1": "Quantitative finance at CMAP: modeling Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein models",
       "text2": "Data science in digital humanities at Mus'X."
     }
+  },
+  "footer": {
+    "rights": "All rights reserved. No vibe coding."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred, please try again later."
   }
 }
