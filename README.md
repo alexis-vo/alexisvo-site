@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# alexisvo.fr
 
-## Getting Started
+Portfolio personnel — [alexisvo.fr](https://alexisvo.fr)
 
-First, run the development server:
+Site vitrine qui présente mon parcours, mes projets académiques et personnels, mon CV, ainsi qu'une bibliothèque de fiches de cours et sujets de khôlles.
+
+## ✨ Fonctionnalités
+
+- **Accueil** — présentation, parcours académique, citation
+- **Projets** — galerie filtrable par catégorie et par technologie, avec aperçu PDF (posters de recherche) pour chaque projet
+- **CV** — aperçu et téléchargement direct au format PDF
+- **Notes & Khôlles** — fiches de cours et sujets de colles, filtrables par type
+- **Contact** — formulaire fonctionnel (via Formspree)
+- **Mode clair / sombre** — bascule manuelle, avec détection de la préférence système
+- **FR / EN** — internationalisation complète de l'interface et du contenu
+- **SEO** — sitemap, robots.txt, metadata dynamiques, image Open Graph générée à la volée, données structurées Schema.org
+
+## 🛠️ Stack technique
+
+- [Next.js](https://nextjs.org/) (App Router) + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [next-intl](https://next-intl.dev/) pour l'internationalisation
+- [Formspree](https://formspree.io/) pour le formulaire de contact
+- Déployé sur [Vercel](https://vercel.com/)
+
+## 🚀 Lancer le projet en local
 
 ```bash
+# Cloner le repo
+git clone https://github.com/alexis-vo/alexisvo.git
+cd alexisvo
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site est accessible sur [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build de production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## 📁 Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  [locale]/          # Pages (FR/EN), via next-intl
+    page.tsx           # Accueil
+    projects/           # Liste + détail des projets
+    cv/                  # Page CV
+    blog/                # Notes & khôlles
+    contact/             # Formulaire de contact
+  sitemap.ts          # Génération du sitemap
+  robots.ts           # robots.txt
+  opengraph-image.tsx  # Image OG générée dynamiquement
+components/          # Composants React réutilisables
+data/                # Données des projets et fiches (projects.ts, posts.ts)
+messages/            # Fichiers de traduction (fr.json, en.json)
+i18n/                # Configuration next-intl
+public/              # Assets statiques, PDF (CV, posters)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 Licence
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tous droits réservés — le code source est partagé à titre de démonstration technique et pédagogique. Le contenu personnel (CV, projets, textes) reste ma propriété.
 
-## Deploy on Vercel
+## 📬 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[alexisvo.fr/contact](https://alexisvo.fr/contact) · [LinkedIn](https://linkedin.com/in/alexis-vo) · [GitHub](https://github.com/alexis-vo)
