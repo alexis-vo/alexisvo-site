@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "cv": "CV",
+    "blog": "Notes",
+    "contact": "Contact"
+  },
+  "hero": {
+  "subtitle": "Étudiant ingénieur • CentraleSupélec",
+  "name": "Alexis VO",
+  "quote": "« Comprendre, modéliser, décider. »",
+  "downloadCv": "Télécharger mon CV"
+  },
+  "about": {
+    "title": "À propos",
+    "text": "De la Double Licence Mathématiques-Informatique de l'Université Paris-Saclay à CentraleSupélec, en passant par des stages en finance quantitative et data science à l'École polytechnique."
+  },
+  "cv": {
+    "title": "Mon CV",
+    "subtitle": "Aperçu ci-dessous, ou téléchargement direct au format PDF.",
+    "download": "Télécharger le PDF"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur est survenue, veuillez réessayer plus tard."
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une sélection de projets techniques et personnels.",
+    "all": "Tous",
+    "allCategories": "Toutes catégories",
+    "noResults": "Aucun projet ne correspond à ces critères.",
+    "showMore": "autres",
+    "showLess": "Voir moins",
+    "backToProjects": "← Retour aux projets",
+    "viewProject": "Voir le projet"
+  },
+  "blog": {
+    "title": "Notes & Khôlles",
+    "subtitle": "Fiches de cours et sujets de khôlles en mathématiques, IA et finance.",
+    "all": "Tout",
+    "lectureNotes": "Lecture Notes",
+    "colles": "Khôlle",
+    "noResults": "Aucun contenu pour cette catégorie pour le moment.",
+    "backToBlog": "← Retour aux notes"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "aboutMe": {
+    "title": "À propos",
+    "text": "De la Double Licence Mathématiques-Informatique de l'Université Paris-Saclay à CentraleSupélec, en passant par des stages en finance quantitative et data science à l'École polytechnique."
+  },
+  "parcours": {
+    "title": "Parcours",
+    "entry1": {
+      "date": "2026 — aujourd'hui",
+      "title": "CentraleSupélec — Cursus ingénieur généraliste",
+      "text": "Admis en 1A, avec un intérêt marqué pour les mathématiques financières et la data science."
+    },
+    "entry2": {
+      "date": "2023 — 2026",
+      "title": "Université Paris-Saclay — Double Licence Mathématiques-Informatique",
+      "text": "Formation exigeante alliant mathématiques rigoureuses et fondamentaux en informatique."
+    },
+    "entry3": {
+      "date": "Stages",
+      "title": "École polytechnique",
+      "text1": "Finance quantitative au CMAP : modélisation des modèles Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein",
+      "text2": "Data science en humanités numériques au Mus'X."
+    }
+  }
+}

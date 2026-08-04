@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "cv": "Resume",
+    "blog": "Notes",
+    "contact": "Contact"
+  },
+  "hero": {
+  "subtitle": "Engineering Student • CentraleSupélec",
+  "name": "Alexis VO",
+  "quote": "\"Understand, model, decide.\"",
+  "downloadCv": "Download my resume"
+  },
+  "about": {
+    "title": "About",
+    "text": "From a Dual Bachelor's in Mathematics and Computer Science at Université Paris-Saclay to CentraleSupélec, including internships in quantitative finance and data science at École Polytechnique."
+  },
+  "cv": {
+    "title": "My Resume",
+    "subtitle": "Preview below, or download directly as PDF.",
+    "download": "Download PDF"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred, please try again later."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of technical and personal projects.",
+    "all": "All",
+    "allCategories": "All categories",
+    "noResults": "No projects match these criteria.",
+    "showMore": "more",
+    "showLess": "Show less",
+    "backToProjects": "← Back to projects",
+    "viewProject": "View project"
+  },
+  "blog": {
+    "title": "Notes & Study Sheets",
+    "subtitle": "Course notes and exam topics in math, AI and finance.",
+    "all": "All",
+    "lectureNotes": "Lecture Notes",
+    "colles": "Study Sheets",
+    "noResults": "No content in this category yet.",
+    "backToBlog": "← Back to notes"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "aboutMe": {
+    "title": "About",
+    "text": "From a Dual Bachelor's in Mathematics and Computer Science at Université Paris-Saclay to CentraleSupélec, including internships in quantitative finance and data science at École Polytechnique."
+  },
+  "parcours": {
+    "title": "Background",
+    "entry1": {
+      "date": "2026 — present",
+      "title": "CentraleSupélec — General Engineering Program",
+      "text": "Admitted in first year, with a strong interest in quantitative finance and data science."
+    },
+    "entry2": {
+      "date": "2023 — 2026",
+      "title": "Université Paris-Saclay — Dual Bachelor's in Mathematics and Computer Science",
+      "text": "Demanding program combining rigorous mathematics with computer science fundamentals."
+    },
+    "entry3": {
+      "date": "Internships",
+      "title": "École Polytechnique",
+      "text1": "Quantitative finance at CMAP: modeling Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein models",
+      "text2": "Data science in digital humanities at Mus'X."
+    }
+  }
+}

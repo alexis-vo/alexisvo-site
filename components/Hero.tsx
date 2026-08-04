@@ -2,9 +2,12 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import SocialLinks from "./SocialLinks";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="min-h-[calc(100vh-73px)] flex items-center justify-center px-6 md:px-12">
       <div className="hero-animate w-full max-w-3xl flex flex-col sm:flex-row items-center gap-8 sm:gap-12 py-16 px-8 md:px-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm bg-white dark:bg-zinc-900">
@@ -19,15 +22,15 @@ export default function Hero() {
 
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6">
           <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
-            Étudiant ingénieur • CentraleSupélec
+            {t("subtitle")}
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
-            Alexis VO
+            {t("name")}
           </h1>
 
           <p className="text-xl italic text-gray-600 dark:text-gray-300" style={{ fontFamily: "var(--font-playfair)" }}>
-            « Comprendre, modéliser, décider. »
+            {t("quote")}
           </p>
 
           <div className="mt-2 flex items-center gap-4">
@@ -41,12 +44,12 @@ export default function Hero() {
                 link.download = "CV_Alexis_VO.pdf";
                 link.click();
               }}
-              aria-label="Télécharger mon CV"
+              aria-label={t("downloadCv")}
               className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors overflow-hidden"
             >
               <Image
                 src="/images/cv-icon.png"
-                alt="Télécharger mon CV"
+                alt={t("downloadCv")}
                 width={24}
                 height={24}
                 className="dark:invert"

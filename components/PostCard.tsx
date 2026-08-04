@@ -1,5 +1,5 @@
 // components/PostCard.tsx
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Post } from "@/data/posts";
 
 const categoryLabels: Record<string, string> = {

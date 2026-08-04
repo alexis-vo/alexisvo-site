@@ -2,20 +2,23 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import ThemeToggle from "./ThemeToggle";
-
-const links = [
-  { href: "/", label: "Accueil" },
-  { href: "/#a-propos", label: "À propos" },
-  { href: "/projects", label: "Projets" },
-  { href: "/cv", label: "CV" },
-  { href: "/blog", label: "Notes" },
-  { href: "/contact", label: "Contact" },
-];
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("nav");
+
+  const links = [
+    { href: "/", label: t("home") },
+    { href: "/#a-propos", label: t("about") },
+    { href: "/projects", label: t("projects") },
+    { href: "/cv", label: t("cv") },
+    { href: "/blog", label: t("blog") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-gray-100 dark:border-gray-800 px-6 md:px-20 py-5">
@@ -45,11 +48,13 @@ export default function Nav() {
             </span>
           ))}
           <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
+          <LocaleSwitcher />
           <ThemeToggle />
         </nav>
 
         {/* Bouton hamburger mobile */}
         <div className="flex md:hidden items-center gap-4">
+          <LocaleSwitcher />
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
