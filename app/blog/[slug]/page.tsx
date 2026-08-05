@@ -1,7 +1,7 @@
 // app/[locale]/blog/[slug]/page.tsx
 import { posts } from "@/data/posts";
 import { notFound } from "next/navigation";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));

@@ -2,23 +2,20 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import LocaleSwitcher from "./LocaleSwitcher";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/cv", label: "Resume" },
+  { href: "/blog", label: "Notes" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const t = useTranslations("nav");
-
-  const links = [
-    { href: "/", label: t("home") },
-    { href: "/#a-propos", label: t("about") },
-    { href: "/projects", label: t("projects") },
-    { href: "/cv", label: t("cv") },
-    { href: "/blog", label: t("blog") },
-    { href: "/contact", label: t("contact") },
-  ];
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-gray-100 dark:border-gray-800 px-6 md:px-20 py-5">
@@ -31,7 +28,6 @@ export default function Nav() {
           Alexis VO
         </Link>
 
-        {/* Nav desktop */}
         <nav className="hidden md:flex items-center gap-6">
           {links.map((link, index) => (
             <span key={link.href} className="flex items-center gap-6">
@@ -48,13 +44,10 @@ export default function Nav() {
             </span>
           ))}
           <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
-          <LocaleSwitcher />
           <ThemeToggle />
         </nav>
 
-        {/* Bouton hamburger mobile */}
         <div className="flex md:hidden items-center gap-4">
-          <LocaleSwitcher />
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -86,7 +79,6 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Menu mobile déplié */}
       {isOpen && (
         <nav className="md:hidden flex flex-col gap-4 mt-6 pb-2">
           {links.map((link) => (

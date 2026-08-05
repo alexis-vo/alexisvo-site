@@ -1,5 +1,5 @@
 // components/ProjectCard.tsx
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </p>
 
       <span className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-        {new Date(project.date).toLocaleDateString("fr-FR", {
+        {new Date(project.date).toLocaleDateString("en-US", {
           day: "numeric",
           month: "long",
           year: "numeric",

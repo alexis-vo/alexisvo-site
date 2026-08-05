@@ -6,7 +6,7 @@ export default function About() {
     <section className="px-6 md:px-20 py-20 max-w-4xl mx-auto">
       <FadeIn>
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10">
-          Parcours
+          Background
         </h2>
       </FadeIn>
 
@@ -14,15 +14,15 @@ export default function About() {
         <FadeIn delay={0}>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
             <span className="text-sm text-gray-500 dark:text-gray-400 sm:w-40 shrink-0">
-              2026 — aujourd&apos;hui
+              2026 — present
             </span>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">
-                CentraleSupélec — Cursus ingénieur généraliste
+                CentraleSupélec — General Engineering Program
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Admis en 1A, avec un intérêt marqué pour les mathématiques
-                financières et la data science.
+                Admitted in first year, with a strong interest in quantitative
+                finance and data science.
               </p>
             </div>
           </div>
@@ -35,11 +35,11 @@ export default function About() {
             </span>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">
-                Université Paris-Saclay — Double Licence Mathématiques-Informatique
+                Université Paris-Saclay — Dual Bachelor&apos;s in Mathematics and Computer Science
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Formation exigeante alliant
-                mathématiques rigoureuses et fondamentaux en informatique.
+                Demanding program combining rigorous mathematics with computer
+                science fundamentals.
               </p>
             </div>
           </div>
@@ -48,15 +48,15 @@ export default function About() {
         <FadeIn delay={200}>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
             <span className="text-sm text-gray-500 dark:text-gray-400 sm:w-40 shrink-0">
-              Stages
+              Internships
             </span>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">
-                École polytechnique
+                École Polytechnique
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                - Finance quantitative au CMAP : modélisation des modèles Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein<br></br>
-                - Data science en humanités numériques au Mus&apos;X.
+                - Quantitative finance at CMAP: modeling Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein models<br />
+                - Data science in digital humanities at Mus&apos;X.
               </p>
             </div>
           </div>

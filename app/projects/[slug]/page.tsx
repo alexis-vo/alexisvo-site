@@ -1,7 +1,7 @@
 // app/[locale]/projects/[slug]/page.tsx
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
