@@ -7,7 +7,7 @@ import PostCard from "./PostCard";
 import FadeIn from "./FadeIn";
 
 const tabs: { key: PostCategory | "all"; label: string }[] = [
-  { key: "all", label: "Tout" },
+  { key: "all", label: "All" },
   { key: "lecture-notes", label: "Lecture Notes" },
   { key: "colles", label: "Khôlles" },
 ];
@@ -38,7 +38,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
 
       {filtered.length === 0 ? (
         <p className="text-gray-500 dark:text-gray-400">
-          Aucun contenu pour cette catégorie pour le moment.
+          No content in this category yet.
         </p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

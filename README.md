@@ -23,7 +23,7 @@ Personal website showcasing my background, academic and personal projects, resum
 
 ## 🚀 Running locally
 
-\`\`\`bash
+```bash
 # Clone the repo
 git clone https://github.com/alexis-vo/alexisvo-site.git
 cd alexisvo-site
@@ -33,33 +33,33 @@ npm install
 
 # Start the development server
 npm run dev
-\`\`\`
+```
 
 The site is available at [http://localhost:3000](http://localhost:3000).
 
 ### Production build
 
-\`\`\`bash
+```bash
 npm run build
 npm run start
-\`\`\`
+```
 
 ## 📁 Project structure
 
-\`\`\`
+```
 app/
-  page.tsx            # Home page
-  projects/            # Project list + detail pages
-  cv/                   # Resume page
-  blog/                 # Notes & study sheets
-  contact/               # Contact form
-  sitemap.ts           # Sitemap generation
-  robots.ts            # robots.txt
-  opengraph-image.tsx   # Dynamically generated OG image
-components/          # Reusable React components
-data/                # Project and post data (projects.ts, posts.ts)
-public/              # Static assets, PDFs (resume, posters)
-\`\`\`
+  page.tsx              # Home page
+  projects/              # Project list + detail pages
+  cv/                     # Resume page
+  blog/                    # Notes & study sheets
+  contact/                  # Contact form
+  sitemap.ts             # Sitemap generation
+  robots.ts              # robots.txt
+  opengraph-image.tsx     # Dynamically generated OG image
+components/              # Reusable React components
+data/                     # Project and post data (projects.ts, posts.ts)
+public/                   # Static assets, PDFs (resume, posters)
+```
 
 ## 📄 License
 

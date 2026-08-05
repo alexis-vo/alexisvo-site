@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Alexis Vo — Ingénieur CentraleSupélec";
+export const alt = "Alexis Vo — Engineering student at CentraleSupélec";
 export const size = {
   width: 1200,
   height: 630,
@@ -33,7 +33,7 @@ export default function OpengraphImage() {
             marginBottom: 24,
           }}
         >
-          Étudiant ingénieur • CentraleSupélec
+          Engineering student • CentraleSupélec
         </div>
 
         <div
@@ -55,7 +55,7 @@ export default function OpengraphImage() {
             maxWidth: 800,
           }}
         >
-          Mathématiques financières • IA • Finance quantitative
+          Quantitative Finance • AI • Financial Mathematics
         </div>
       </div>
     ),

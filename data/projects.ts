@@ -1,5 +1,5 @@
 // data/projects.ts
-export type ProjectCategory = "LDD1" | "LDD2" | "LDD3" | "Projet perso";
+export type ProjectCategory = "LDD1" | "LDD2" | "LDD3" | "Personal project";
 
 export type Project = {
   slug: string;
@@ -7,206 +7,206 @@ export type Project = {
   description: string;
   stack: string[];
   category: ProjectCategory;
-  date: string; // format ISO : "2026-01-15"
-  poster?: string;     // chemin vers le PDF du poster
+  date: string; // ISO : "2026-01-15"
+  poster?: string;
   posterOrientation?: "portrait" | "landscape";
-  link?: string;        // lien externe optionnel (GitHub, démo...)
+  link?: string;
 };
 
 
 
 export const projects: Project[] = [
   {
-  slug: "blaise-alumni",
-  category: "Projet perso",
-  title: "Groupe Blaise Alumni",
-  description:
-    "Groupe des anciens élèves et étudiants du lycée Blaise Pascal d'Orsay. Accompagnement personnalisé, conception de supports pédagogiques, préparations aux examens et concours, réseautage...",
-  stack: ["Entrepreunariat", "Communication", "Création de contenu", "Réseautage"],
-  date: "2026",
-  poster: "/posters/blaise-alumni.pdf",
-  posterOrientation: "landscape",
-  link: "https://linktr.ee/blaise.alumni",
+    slug: "blaise-alumni",
+    category: "Personal project",
+    title: "Blaise Alumni Group",
+    description:
+      "Alumni and student network from Lycée Blaise Pascal in Orsay. Personalized tutoring, design of educational materials, exam and admissions prep, networking...",
+    stack: ["Entrepreneurship", "Communication", "Content Creation", "Networking"],
+    date: "2026",
+    poster: "/posters/blaise-alumni.pdf",
+    posterOrientation: "landscape",
+    link: "https://linktr.ee/blaise.alumni",
   },
   {
-    slug: "serveur-nextcloud",
-    category: "Projet perso",
-    title: "Serveur personnel Nextcloud + VPN",
+    slug: "nextcloud-server",
+    category: "Personal project",
+    title: "Personal Nextcloud Server + VPN",
     description:
-      "Configuration d'un serveur Ubuntu avec Nextcloud (NAS personnel) et WireGuard pour un accès distant sécurisé.",
+      "Set up of an Ubuntu server with Nextcloud (personal NAS) and WireGuard for secure remote access.",
     stack: ["Ubuntu Server", "Nextcloud", "WireGuard"],
     date: "2026",
     poster: "/posters/nextcloud-wireguard.pdf",
     posterOrientation: "landscape",
   },
   {
-  slug: "micro-go",
-  category: "LDD3",
-  title: "Compilateur micro Go",
-  description:
-    "Réalisation d'un compilateur micro Go dans le cadre d'un projet de fin de semestre du module Compilation.",
-  stack: ["OCaml", "Compilation", "MIPS"],
-  date: "2026",
-  poster: "/posters/rapport-micro-go.pdf",
-  posterOrientation: "portrait",
+    slug: "micro-go",
+    category: "LDD3",
+    title: "Micro Go Compiler",
+    description:
+      "Implementation of a Micro Go compiler as part of a semester-end project for the Compilation module.",
+    stack: ["OCaml", "Compilation", "MIPS"],
+    date: "2026",
+    poster: "/posters/rapport-micro-go.pdf",
+    posterOrientation: "portrait",
   },
   {
-  slug: "fairness",
-  category: "LDD3",
-  title: "Fairness en imagerie médicale",
-  description:
-    "Étude de la fairness d'un modèle ResNet18 de classification de radiographies thoraciques NIH Chest X-ray 14. Identification des biais et interprétations.",
-  stack: ["Python", "Deep Learning", "Fairness in AI"],
-  date: "2026",
-  poster: "/posters/rapport-fairness.pdf",
-  posterOrientation: "landscape",
+    slug: "fairness",
+    category: "LDD3",
+    title: "Fairness in Medical Imaging",
+    description:
+      "Study of the fairness of a ResNet18 model for classifying chest X-rays from the NIH Chest X-ray 14 dataset. Bias identification and interpretation.",
+    stack: ["Python", "Deep Learning", "Fairness in AI"],
+    date: "2026",
+    poster: "/posters/rapport-fairness.pdf",
+    posterOrientation: "landscape",
   },
   {
-  slug: "jfp16",
-  category: "Projet perso",
-  title: "Journées Franciliennes de la Programmation — 16ème édition.",
-  description:
-    "Implémentation du jeu Hanabi et extensions. Classés 2ème sur 15 équipes.",
-  stack: ["Algorithmique", "Automates", "Théorie des jeux"],
-  date: "2026",
-  poster: "/posters/jfp16.pdf",
-  posterOrientation: "portrait",
-  link: "https://usr.lmf.cnrs.fr/~conchon/jfp16/"
+    slug: "jfp16",
+    category: "Personal project",
+    title: "Journées Franciliennes de la Programmation — 16th edition",
+    description:
+      "Implementation of the Hanabi game and extensions. Ranked 2nd out of 15 teams.",
+    stack: ["Algorithms", "Automata", "Game Theory"],
+    date: "2026",
+    poster: "/posters/jfp16.pdf",
+    posterOrientation: "portrait",
+    link: "https://usr.lmf.cnrs.fr/~conchon/jfp16/",
   },
   {
-  slug: "jfp15",
-  category: "Projet perso",
-  title: "Journées Franciliennes de la Programmation — 15ème édition.",
-  description:
-    "Codecs de compression d'images. Classés 4ème sur 16 équipes.",
-  stack: ["Algorithmique", "Compression de données", "Structures de données"],
-  date: "2026",
-  poster: "/posters/jfp15.pdf",
-  posterOrientation: "portrait",
-  link: "https://usr.lmf.cnrs.fr/~kn/jfp15/"
+    slug: "jfp15",
+    category: "Personal project",
+    title: "Journées Franciliennes de la Programmation — 15th edition",
+    description:
+      "Image compression codecs. Ranked 4th out of 16 teams.",
+    stack: ["Algorithms", "Data Compression", "Data Structures"],
+    date: "2026",
+    poster: "/posters/jfp15.pdf",
+    posterOrientation: "portrait",
+    link: "https://usr.lmf.cnrs.fr/~kn/jfp15/",
   },
   {
-  slug: "projet-sai",
-  category: "LDD3",
-  title: "IA Dots & Boxes — Stratégies adversariales hybrides.",
-  description:
-    "Implémentation et comparaison de stratégies de jeu pour Dots & Boxes, de l'aléatoire  au glouton, jusqu'à Minimax, Alpha-Beta et Monte Carlo Tree Search. Classés 2ème sur 10 équipes du tournoi final.",
-  stack: ["Java", "Intelligence Artificielle", "Théorie des jeux"],
-  date: "2026",
-  poster: "/posters/rapport-sai.pdf",
-  posterOrientation: "portrait",
+    slug: "dots-and-boxes-ai",
+    category: "LDD3",
+    title: "Dots & Boxes AI — Hybrid Adversarial Strategies",
+    description:
+      "Implementation and comparison of game strategies for Dots & Boxes, from random and greedy approaches to Minimax, Alpha-Beta, and Monte Carlo Tree Search. Ranked 2nd out of 10 teams in the final tournament.",
+    stack: ["Java", "Artificial Intelligence", "Game Theory"],
+    date: "2026",
+    poster: "/posters/rapport-sai.pdf",
+    posterOrientation: "portrait",
   },
   {
-  slug: "compression-huffman",
-  category: "LDD2",
-  title: "Compression de texte — Algorithme de Huffman",
-  description:
-    "Implémentation en OCaml d'un compresseur/décompresseur de fichiers texte par codage de Huffman, avec gestion des fichiers binaires, file de priorité pour la construction de l'arbre, et fonctionnalités de statistiques (taux de compression, fréquences des caractères). Testé sur de gros corpus (Bible, Coran) avec un taux de compression de 61,85%.",
-  stack: ["OCaml", "Algorithmique", "Compression de données"],
-  date: "2026",
-  poster: "/posters/rapport-ipf.pdf",
-  posterOrientation: "portrait",
-},
-{
-  slug: "circuits-booleens-graphes",
-  category: "LDD2",
-  title: "Circuits booléens et graphes",
-  description:
-    "Bibliothèque Python de graphes orientés (OpenDigraph) appliquée à la modélisation et l'évaluation de circuits booléens acycliques. Implémentation d'algorithmes de graphe (Dijkstra, tri topologique, plus long chemin), de synthèse de circuits depuis des formules propositionnelles, et étude de cas (half-adder, additionneurs, vérification de code de Hamming).",
-  stack: ["Python", "Algorithmique", "Théorie des graphes"],
-  date: "2026",
-  poster: "/posters/rapport-bool.pdf",
-  posterOrientation: "portrait",
-},
-{
-  slug: "momies-et-pyramides",
-  category: "LDD2",
-  title: "Des momies et des pyramides",
-  description:
-    "Extension d'un moteur de labyrinthe 3D en Processing (Java) pour générer deux modèles procéduraux : une pyramide obtenue par empilement de labyrinthes de tailles décroissantes avec sol désertique modulé par bruit de Perlin, et une momie articulée construite par révolution de quad-strips (bandelettes à couleur et rayon variables) organisée en PShape(GROUP). Gestion de la lumière et des shaders selon la position du personnage (intérieur sombre / extérieur clair), déplacement aléatoire de la momie dans le labyrinthe, et fonctionnalités bonus (boussole dynamique, changement de niveau).",
-  stack: ["Processing", "Java", "Infographie 3D", "Génération procédurale"],
-  date: "2026",
-  poster: "/posters/projet-igsd.pdf",
-  posterOrientation: "portrait",
-},
-{
-  slug: "jarnac",
-  category: "LDD1",
-  title: "Jarnac",
-  description:
-    "Implémentation en C++ du jeu de lettres Jarnac : moteur de jeu, contrôleur et vue en mode texte compilés via CMake. Étude de la complexité des méthodes de recherche dans le dictionnaire et conception d'une IA de formation de mots pondérée par longueur et difficulté, optimisée par réduction du dictionnaire et recherche restreinte aux anagrammes des mots du plateau. Extensions : choix de la langue (français/anglais), taille du plateau, contraintes de longueur des mots, mode multijoueur et IA vs IA.",
-  stack: ["C++", "CMake", "Algorithmique", "Structures de données"],
-  date: "2026",
-  poster: "/posters/rapport-jarnac.pdf",
-  posterOrientation: "portrait",
-},
-{
-  slug: "programmation-reseaux-tcp-udp",
-  category: "LDD2",
-  title: "Programmation réseaux TCP/UDP",
-  description:
-    "Implémentation en C de clients et serveurs communiquant selon les protocoles TCP et UDP, avec un launcher interactif pour choisir le protocole, le rôle et un mode développeur. Serveur TCP multi-threadé (thread console pour les commandes CLEAR/SHUTDOWN et thread de communication), gestion des connexions/déconnexions, et manipulation des sockets via socket(), bind(), connect(), send() et recv().",
-  stack: ["C", "Programmation réseau", "Sockets", "Multithreading"],
-  date: "2026",
-  poster: "/posters/rapport-reseaux.pdf",
-  posterOrientation: "portrait",
-},
-{
-  slug: "algebre-lineaire-2-notes-de-cours",
-  category: "LDD2",
-  title: "Algèbre Linéaire II — Notes de cours (OLMA252)",
-  description:
-    "Notes de cours co-écrites avec l'enseignant du module OLMA252 à l'Université Paris-Saclay, à destination de l'ensemble de la promotion LDD2. Le document couvre les espaces euclidiens, l'orthogonalité et les bases orthonormales, les isométries et adjoints, les déterminants, ainsi que la réduction des endomorphismes (valeurs propres, polynôme caractéristique, trigonalisation, théorème de Cayley-Hamilton), avec un appendice de rappels d'algèbre linéaire 1 et des questions de compréhension corrigées après chaque exposé. Contribution : relecture et correction du document.",
-  stack: ["Algèbre linéaire", "LaTeX", "Mathématiques"],
-  date: "2026",
-  poster: "/posters/linalg2-2024-2025.pdf",
-  posterOrientation: "portrait",
-  link: "https://janschuetz.perso.math.cnrs.fr/"
-},
-{
-  slug: "marathon-orsay-mathematiques",
-  category: "Projet perso",
-  title: "Marathon d'Orsay de Mathématiques 2024–2025",
-  description:
-    "Participation au Marathon d'Orsay de Mathématiques, concours annuel de résolution de problèmes organisé par l'Université Paris-Saclay (Laboratoire de Mathématiques d'Orsay, financé par la Fondation Mathématique Jacques Hadamard). Résolution de 2 problèmes du marathon complet, valant le titre de Marathonien fuchsien arithmétique de deuxième espèce.",
-  stack: ["Mathématiques", "Résolution de problèmes"],
-  date: "2026",
-  poster: "/posters/marathon-math2425.pdf",
-  posterOrientation: "portrait",
-  link: "https://www.imo.universite-paris-saclay.fr/marathon/"
-},
-{
-  slug: "atelier-mathenjeans-distributif",
-  category: "Projet perso",
-  title: "Atelier MATh.en.JEANS — Opérations distributives",
-  description:
-    "Atelier de recherche MATh.en.JEANS (Faculté des Sciences d'Orsay, encadré par Pierre Pansu et Aurélien Perdriaud) autour d'une question ouverte : la multiplication est distributive par rapport à l'addition, mais existe-t-il une opération distributive par rapport à la multiplication ? À partir de l'idée que le logarithme transforme la multiplication en une addition déguisée, exploration de nouvelles lois de composition construites par analogie, et étude de leurs propriétés algébriques (distributivité, structures induites).",
-  stack: ["Algèbre", "Structures algébriques", "Recherche mathématique"],
-  date: "2026",
-  poster: "/posters/Distributif.pdf",
-  posterOrientation: "landscape",
-  link: "https://www.mathenjeans.fr/content/Faculte-des-Sciences-dOrsay-2023-2024",
-},
-{
-slug: "ile-interdite",
-category: "LDD2",
-title: "L'Île Interdite",
-description:
-  "Adaptation numérique en Java du jeu de plateau coopératif L'Île Interdite, avec interface graphique Swing. Architecture MVC (modèle du plateau et des zones, contrôleur des interactions clavier/souris, vue graphique) avec héritage pour les cases spéciales (Temple, Héliport), gestion de l'inondation progressive de l'île, du ramassage d'artefacts, du système tour par tour et des capacités de rôles (Ingénieur, Pilote). Interface soignée : pions animés, images dynamiques par état de zone, gestion du son.",
-stack: ["Java", "Swing", "Programmation orientée objet", "MVC"],
-date: "2026",
-poster: "/posters/rapport-pogl.pdf",
-posterOrientation: "portrait",
-},
-{
-  slug: "labyrinthe",
-  category: "LDD1",
-  title: "Labyrinthe",
-  description:
-    "Étude mathématique des labyrinthes vus comme structures combinatoires : dénombrement des pseudo-labyrinthes de taille n×m, calcul du nombre maximal de murs par récurrence, formule générale du cardinal de l'ensemble des pseudo-labyrinthes, et démonstration de l'existence et de l'unicité d'un chemin vers la sortie dans un labyrinthe. Établissement des conditions nécessaires et suffisantes (nombre de murs, connexité) pour qu'un pseudo-labyrinthe soit un véritable labyrinthe.",
-  stack: ["Combinatoire", "Théorie des graphes", "Démonstration mathématique"],
-  date: "2024",
-  poster: "/posters/rapport-projetMI.pdf",
-  posterOrientation: "portrait",
-},
+    slug: "huffman-compression",
+    category: "LDD2",
+    title: "Text Compression — Huffman Algorithm",
+    description:
+      "OCaml implementation of a text file compressor/decompressor using Huffman coding, with binary file handling, a priority queue for tree construction, and statistics features (compression ratio, character frequencies). Tested on large corpora (Bible, Quran) with a compression ratio of 61.85%.",
+    stack: ["OCaml", "Algorithms", "Data Compression"],
+    date: "2026",
+    poster: "/posters/rapport-ipf.pdf",
+    posterOrientation: "portrait",
+  },
+  {
+    slug: "boolean-circuits-graphs",
+    category: "LDD2",
+    title: "Boolean Circuits and Graphs",
+    description:
+      "Python library of directed graphs (OpenDigraph) applied to the modeling and evaluation of acyclic Boolean circuits. Implementation of graph algorithms (Dijkstra, topological sort, longest path), circuit synthesis from propositional formulas, and case studies (half-adder, adders, Hamming code verification).",
+    stack: ["Python", "Algorithms", "Graph Theory"],
+    date: "2026",
+    poster: "/posters/rapport-bool.pdf",
+    posterOrientation: "portrait",
+  },
+  {
+    slug: "mummies-and-pyramids",
+    category: "LDD2",
+    title: "Mummies and Pyramids",
+    description:
+      "Extension of a 3D maze engine in Processing (Java) to procedurally generate two models: a pyramid built by stacking mazes of decreasing size with a desert floor modulated by Perlin noise, and an articulated mummy built by revolving quad-strips (bands with variable color and radius) organized as a PShape(GROUP). Lighting and shader handling based on the character's position (dark interior / bright exterior), random mummy movement within the maze, and bonus features (dynamic compass, level switching).",
+    stack: ["Processing", "Java", "3D Computer Graphics", "Procedural Generation"],
+    date: "2026",
+    poster: "/posters/projet-igsd.pdf",
+    posterOrientation: "portrait",
+  },
+  {
+    slug: "jarnac",
+    category: "LDD1",
+    title: "Jarnac",
+    description:
+      "C++ implementation of the Jarnac word game: game engine, controller, and text-mode view, compiled via CMake. Study of dictionary search method complexity and design of a word-forming AI weighted by length and difficulty, optimized through dictionary reduction and search restricted to anagrams of board words. Extensions: language choice (French/English), board size, word length constraints, multiplayer mode, and AI vs AI.",
+    stack: ["C++", "CMake", "Algorithms", "Data Structures"],
+    date: "2026",
+    poster: "/posters/rapport-jarnac.pdf",
+    posterOrientation: "portrait",
+  },
+  {
+    slug: "tcp-udp-networking",
+    category: "LDD2",
+    title: "TCP/UDP Network Programming",
+    description:
+      "C implementation of clients and servers communicating over the TCP and UDP protocols, with an interactive launcher to choose the protocol, role, and a developer mode. Multi-threaded TCP server (console thread for CLEAR/SHUTDOWN commands and a communication thread), connection/disconnection handling, and socket manipulation via socket(), bind(), connect(), send(), and recv().",
+    stack: ["C", "Network Programming", "Sockets", "Multithreading"],
+    date: "2026",
+    poster: "/posters/rapport-reseaux.pdf",
+    posterOrientation: "portrait",
+  },
+  {
+    slug: "linear-algebra-2-lecture-notes",
+    category: "LDD2",
+    title: "Linear Algebra II — Lecture Notes (OLMA252)",
+    description:
+      "Lecture notes co-written with the instructor of the OLMA252 module at Université Paris-Saclay, intended for the entire LDD2 cohort. The document covers Euclidean spaces, orthogonality and orthonormal bases, isometries and adjoints, determinants, and the reduction of endomorphisms (eigenvalues, characteristic polynomial, triangularization, Cayley-Hamilton theorem), with an appendix reviewing linear algebra 1 and corrected comprehension questions after each lecture. Contribution: proofreading and correction of the document.",
+    stack: ["Linear Algebra", "LaTeX", "Mathematics"],
+    date: "2026",
+    poster: "/posters/linalg2-2024-2025.pdf",
+    posterOrientation: "portrait",
+    link: "https://janschuetz.perso.math.cnrs.fr/",
+  },
+  {
+    slug: "orsay-math-marathon",
+    category: "Personal project",
+    title: "Orsay Mathematics Marathon 2024–2025",
+    description:
+      "Participation in the Orsay Mathematics Marathon, an annual problem-solving competition organized by Université Paris-Saclay (Laboratoire de Mathématiques d'Orsay, funded by the Fondation Mathématique Jacques Hadamard). Solved 2 problems of the full marathon, earning the title of 'Marathonien fuchsien arithmétique de deuxième espèce.'",
+    stack: ["Mathematics", "Problem Solving"],
+    date: "2026",
+    poster: "/posters/marathon-math2425.pdf",
+    posterOrientation: "portrait",
+    link: "https://www.imo.universite-paris-saclay.fr/marathon/",
+  },
+  {
+    slug: "mathenjeans-distributive-workshop",
+    category: "Personal project",
+    title: "MATh.en.JEANS Workshop — Distributive Operations",
+    description:
+      "MATh.en.JEANS research workshop (Faculté des Sciences d'Orsay, supervised by Pierre Pansu and Aurélien Perdriaud) exploring an open question: multiplication is distributive over addition, but does an operation distributive over multiplication exist? Starting from the idea that the logarithm turns multiplication into a disguised addition, exploration of new composition laws built by analogy, and study of their algebraic properties (distributivity, induced structures).",
+    stack: ["Algebra", "Algebraic Structures", "Mathematical Research"],
+    date: "2026",
+    poster: "/posters/Distributif.pdf",
+    posterOrientation: "landscape",
+    link: "https://www.mathenjeans.fr/content/Faculte-des-Sciences-dOrsay-2023-2024",
+  },
+  {
+    slug: "forbidden-island",
+    category: "LDD2",
+    title: "Forbidden Island",
+    description:
+      "Java digital adaptation of the cooperative board game Forbidden Island, with a Swing graphical interface. MVC architecture (board and zone model, keyboard/mouse interaction controller, graphical view) with inheritance for special tiles (Temple, Helipad), progressive island flooding, artifact collection, turn-based system, and role abilities (Engineer, Pilot). Polished interface: animated pawns, dynamic images based on zone state, sound handling.",
+    stack: ["Java", "Swing", "Object-Oriented Programming", "MVC"],
+    date: "2026",
+    poster: "/posters/rapport-pogl.pdf",
+    posterOrientation: "portrait",
+  },
+  {
+    slug: "maze",
+    category: "LDD1",
+    title: "Maze",
+    description:
+      "Mathematical study of mazes viewed as combinatorial structures: enumeration of n×m pseudo-mazes, computation of the maximum number of walls by recurrence, a general formula for the cardinality of the set of pseudo-mazes, and proof of the existence and uniqueness of a path to the exit in a maze. Establishment of necessary and sufficient conditions (number of walls, connectivity) for a pseudo-maze to be a true maze.",
+    stack: ["Combinatorics", "Graph Theory", "Mathematical Proof"],
+    date: "2024",
+    poster: "/posters/rapport-projetMI.pdf",
+    posterOrientation: "portrait",
+  },
 ];

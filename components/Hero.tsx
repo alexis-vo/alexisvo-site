@@ -19,7 +19,7 @@ export default function Hero() {
 
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6">
           <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
-            Engineering Student • CentraleSupélec
+            Engineering Student • CentraleSupélec • Université Paris-Saclay
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -27,7 +27,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl italic text-gray-600 dark:text-gray-300" style={{ fontFamily: "var(--font-playfair)" }}>
-            &quot;Understand, model, decide.&quot;
+            &quot;Shaping my future&quot;
           </p>
 
           <div className="mt-2 flex items-center gap-4">

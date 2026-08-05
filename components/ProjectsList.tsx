@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard";
 import FadeIn from "./FadeIn";
 
 const VISIBLE_TAGS_COUNT = 8;
-const categories: ProjectCategory[] = ["LDD1", "LDD2", "LDD3", "Projet perso"];
+const categories: ProjectCategory[] = ["LDD1", "LDD2", "LDD3", "Personal project"];
 
 export default function ProjectsList({ projects }: { projects: Project[] }) {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | "all">("all");
@@ -43,7 +43,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
   return (
     <div>
-      {/* Filtre par catégorie */}
+      {/* Filter by category */}
       <div className="flex gap-2 mb-4 flex-wrap">
         <button
           onClick={() => setActiveCategory("all")}
@@ -53,7 +53,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
               : "border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
           }`}
         >
-          Toutes catégories
+          All categories
         </button>
         {categories.map((cat) => (
           <button
@@ -70,10 +70,10 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
         ))}
       </div>
 
-      {/* Séparateur discret */}
+      {/* Separator */}
       <div className="h-px bg-gray-100 dark:bg-gray-800 mb-4" />
 
-      {/* Filtre par tags techniques */}
+      {/* Filter by tags */}
       <div className="flex gap-2 mb-10 flex-wrap items-center">
         <button
           onClick={() => setActiveTags([])}
@@ -83,7 +83,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
               : "border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
           }`}
         >
-          Tous
+          All
         </button>
 
         {visibleTags.map((tag) => (
@@ -112,7 +112,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
       {filtered.length === 0 ? (
         <p className="text-gray-500 dark:text-gray-400">
-          Aucun projet ne correspond à ces critères.
+          No projects match these criteria.
         </p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

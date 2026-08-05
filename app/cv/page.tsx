@@ -3,8 +3,8 @@ import CvDownloadButton from "@/components/CvDownloadButton";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata = {
-  title: "CV — Alexis VO",
-  description: "Consulter et télécharger mon CV.",
+  title: "Resume — Alexis VO",
+  description: "View and download my resume.",
 };
 
 export default function CvPage() {
@@ -13,10 +13,10 @@ export default function CvPage() {
       <FadeIn>
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-            Mon CV
+            My Resume
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
-            Aperçu ci-dessous, ou téléchargement direct au format PDF.
+            Preview below, or download directly as PDF.
           </p>
         </div>
       </FadeIn>
@@ -30,7 +30,7 @@ export default function CvPage() {
           <iframe
             src="/cv_alexis-vo.pdf"
             className="w-full h-[80vh]"
-            title="Aperçu du CV d'Alexis Vo"
+            title="Preview of Alexis Vo's resume"
           />
         </div>
       </FadeIn>

@@ -8,28 +8,28 @@ export type Post = {
   category: PostCategory;
   subject: string[];
   pdf: string;
-  date: string; // format ISO : "2026-07-18"
+  date: string; // ISO : "2026-07-18"
 };
 
 export const posts: Post[] = [
   {
-    slug: "integration-ipp-bioche",
-    title: "Méthodes d'intégration : IPP, fractions partielles, règles de Bioche",
+    slug: "integration-methods",
+    title: "Integration Methods: IBP, Partial Fractions, Bioche's Rules",
     description:
-      "Fiche de cours couvrant l'intégration par parties, la décomposition en éléments simples et les règles de Bioche pour les intégrales trigonométriques.",
+      "Course notes covering integration by parts, partial fraction decomposition, and Bioche's rules for trigonometric integrals.",
     category: "lecture-notes",
-    subject: ["Mathématiques"],
-    pdf: "/blog/integration-ipp-bioche.pdf",
+    subject: ["Mathematics"],
+    pdf: "/blog/integration-methods.pdf",
     date: "2026-05-10",
   },
   {
-    slug: "khole-analyse-mpsi",
-    title: "Sujet de khôlle — Analyse (MPSI)",
+    slug: "analysis-oral-exam-mpsi",
+    title: "Oral Exam Topic — Analysis (MPSI)",
     description:
-      "Sujet de colle portant sur les suites numériques et les critères de convergence.",
+      "Oral exam topic on numerical sequences and convergence criteria.",
     category: "colles",
-    subject: ["Mathématiques"],
-    pdf: "/blog/khole-analyse-mpsi.pdf",
+    subject: ["Mathematics"],
+    pdf: "/blog/analysis-oral-exam-mpsi.pdf",
     date: "2026-06-02",
   },
 ];

@@ -12,7 +12,7 @@ export default function CvDownloadButton() {
       }}
       className="px-6 py-3 rounded-lg bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
     >
-      Télécharger le PDF
+      Dowload the PDF
     </button>
   );
 }

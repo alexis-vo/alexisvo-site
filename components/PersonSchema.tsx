@@ -6,7 +6,7 @@ export default function PersonSchema() {
     name: "Alexis VO",
     url: "https://alexisvo.fr",
     image: "https://alexisvo.fr/images/profile.png",
-    jobTitle: "Élève ingénieur",
+    jobTitle: "Engineering student",
     affiliation: {
       "@type": "CollegeOrUniversity",
       name: "CentraleSupélec",
@@ -26,9 +26,9 @@ export default function PersonSchema() {
       "https://linkedin.com/in/alexis-vo",
     ],
     knowsAbout: [
-      "Mathématiques financières",
-      "Intelligence artificielle",
-      "Finance quantitative",
+      "Financial mathematics",
+      "Artificial intelligence",
+      "Quantitative finance",
     ],
   };
 

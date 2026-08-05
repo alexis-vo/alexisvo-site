@@ -5,7 +5,7 @@ import BlogList from "@/components/BlogList";
 export const metadata = {
   title: "Notes & Khôlles — Alexis Vo",
   description:
-    "Fiches de cours et sujets de khôlles en mathématiques, IA et finance.",
+    "Lecture notes and oral exam topics in mathematics, AI, and finance.",
 };
 
 export default function BlogPage() {
@@ -15,7 +15,7 @@ export default function BlogPage() {
         Notes & Khôlles
       </h1>
       <p className="text-gray-600 dark:text-gray-300 mb-12">
-        Fiches de cours et sujets de khôlles en mathématiques, IA et finance.
+        Lecture notes and oral exam topics in mathematics, AI, and finance.
       </p>
 
       <BlogList posts={posts} />

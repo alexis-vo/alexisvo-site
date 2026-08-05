@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
     >
       {isDark ? (
-        // Icône soleil
+        // Sun symbol
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -52,7 +52,7 @@ export default function ThemeToggle() {
           <path d="m19.07 4.93-1.41 1.41" />
         </svg>
       ) : (
-        // Icône lune
+        // Moon symbol
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
