@@ -1,74 +1,69 @@
 # alexisvo.fr
 
-Portfolio personnel — [alexisvo.fr](https://alexisvo.fr)
+Personal portfolio — [alexisvo.fr](https://alexisvo.fr)
 
-Site vitrine qui présente mon parcours, mes projets académiques et personnels, mon CV, ainsi qu'une bibliothèque de fiches de cours et sujets de khôlles.
+Personal website showcasing my background, academic and personal projects, resume, and a library of course notes and exam study sheets.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- **Accueil** — présentation, parcours académique, citation
-- **Projets** — galerie filtrable par catégorie et par technologie, avec aperçu PDF (posters de recherche) pour chaque projet
-- **CV** — aperçu et téléchargement direct au format PDF
-- **Notes & Khôlles** — fiches de cours et sujets de colles, filtrables par type
-- **Contact** — formulaire fonctionnel (via Formspree)
-- **Mode clair / sombre** — bascule manuelle, avec détection de la préférence système
-- **FR / EN** — internationalisation complète de l'interface et du contenu
-- **SEO** — sitemap, robots.txt, metadata dynamiques, image Open Graph générée à la volée, données structurées Schema.org
+- **Home** — introduction, academic background, quote
+- **Projects** — filterable gallery by category and technology, with PDF preview (research posters) for each project
+- **Resume** — preview and direct PDF download
+- **Notes & Study Sheets** — course notes and exam topics, filterable by type
+- **Contact** — working contact form (via Formspree)
+- **Light / dark mode** — manual toggle, with system preference detection
+- **SEO** — sitemap, robots.txt, dynamic metadata, dynamically generated Open Graph image, Schema.org structured data
 
-## 🛠️ Stack technique
+## 🛠️ Tech stack
 
 - [Next.js](https://nextjs.org/) (App Router) + TypeScript
 - [Tailwind CSS v4](https://tailwindcss.com/)
-- [next-intl](https://next-intl.dev/) pour l'internationalisation
-- [Formspree](https://formspree.io/) pour le formulaire de contact
-- Déployé sur [Vercel](https://vercel.com/)
+- [Formspree](https://formspree.io/) for the contact form
+- Deployed on [Vercel](https://vercel.com/)
 
-## 🚀 Lancer le projet en local
+## 🚀 Running locally
 
-```bash
-# Cloner le repo
-git clone https://github.com/alexis-vo/alexisvo.git
-cd alexisvo
+\`\`\`bash
+# Clone the repo
+git clone https://github.com/alexis-vo/alexisvo-site.git
+cd alexisvo-site
 
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Lancer le serveur de développement
+# Start the development server
 npm run dev
-```
+\`\`\`
 
-Le site est accessible sur [http://localhost:3000](http://localhost:3000).
+The site is available at [http://localhost:3000](http://localhost:3000).
 
-### Build de production
+### Production build
 
-```bash
+\`\`\`bash
 npm run build
 npm run start
-```
+\`\`\`
 
-## 📁 Structure du projet
+## 📁 Project structure
 
-```
+\`\`\`
 app/
-  [locale]/          # Pages (FR/EN), via next-intl
-    page.tsx           # Accueil
-    projects/           # Liste + détail des projets
-    cv/                  # Page CV
-    blog/                # Notes & khôlles
-    contact/             # Formulaire de contact
-  sitemap.ts          # Génération du sitemap
-  robots.ts           # robots.txt
-  opengraph-image.tsx  # Image OG générée dynamiquement
-components/          # Composants React réutilisables
-data/                # Données des projets et fiches (projects.ts, posts.ts)
-messages/            # Fichiers de traduction (fr.json, en.json)
-i18n/                # Configuration next-intl
-public/              # Assets statiques, PDF (CV, posters)
-```
+  page.tsx            # Home page
+  projects/            # Project list + detail pages
+  cv/                   # Resume page
+  blog/                 # Notes & study sheets
+  contact/               # Contact form
+  sitemap.ts           # Sitemap generation
+  robots.ts            # robots.txt
+  opengraph-image.tsx   # Dynamically generated OG image
+components/          # Reusable React components
+data/                # Project and post data (projects.ts, posts.ts)
+public/              # Static assets, PDFs (resume, posters)
+\`\`\`
 
-## 📄 Licence
+## 📄 License
 
-Tous droits réservés — le code source est partagé à titre de démonstration technique et pédagogique. Le contenu personnel (CV, projets, textes) reste ma propriété.
+All rights reserved — the source code is shared for technical and educational demonstration purposes. Personal content (resume, projects, text) remains my property.
 
 ## 📬 Contact
 
