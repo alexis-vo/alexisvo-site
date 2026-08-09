@@ -9,6 +9,8 @@ exclude = [
   "^https://(www\\.)?instagram\\.com",
   "^https://(www\\.)?x\\.com",
   "^https://(www\\.)?twitter\\.com",
+  "^https://formspree\\.io", # rejette les GET (405) — normal, le form envoie en POST
+  "^https?://localhost",     # URL de dev locale, jamais joignable en CI
 ]
 
 # Réessaye avant de déclarer un lien mort (utile si un site répond

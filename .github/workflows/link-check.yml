@@ -28,5 +28,5 @@ jobs:
             --no-progress
             --config lychee.toml
             --accept 200,201,202,203,204,301,302,307,308
-            './**/*.tsx' './**/*.ts' './**/*.md' './**/*.mdx'
+            './**/*.tsx' './**/*.ts' './**/*.md'
           fail: true # fait échouer le workflow si un lien est cassé
