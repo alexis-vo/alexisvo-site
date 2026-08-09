@@ -21,10 +21,12 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # Scanne tous les fichiers de contenu : composants, pages, markdown
+          # La config (exclusions, retries...) est dans lychee.toml
+          # Les liens mailto: sont exclus par défaut, pas besoin de flag
           args: >
             --verbose
             --no-progress
-            --exclude-mail
+            --config lychee.toml
             --accept 200,201,202,203,204,301,302,307,308
             './**/*.tsx' './**/*.ts' './**/*.md' './**/*.mdx'
           fail: true # fait échouer le workflow si un lien est cassé

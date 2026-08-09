@@ -1,0 +1,24 @@
+# lychee.toml — configuration du link checker
+# Placer à la racine du repo (à côté de package.json)
+
+# Domaines connus pour bloquer/limiter les requêtes automatisées :
+# on les exclut pour éviter les faux positifs (403, 429) sur des
+# liens en réalité valides.
+exclude = [
+  "^https://(www\\.)?linkedin\\.com",
+  "^https://(www\\.)?instagram\\.com",
+  "^https://(www\\.)?x\\.com",
+  "^https://(www\\.)?twitter\\.com",
+]
+
+# Réessaye avant de déclarer un lien mort (utile si un site répond
+# lentement ou renvoie une erreur temporaire)
+max_retries = 3
+retry_wait_time = 5
+
+# Timeout par requête, en secondes
+timeout = 15
+
+# User-Agent réaliste : certains serveurs bloquent les requêtes
+# sans User-Agent ou avec celui par défaut des outils automatisés
+user_agent = "Mozilla/5.0 (compatible; LycheeLinkChecker/1.0)"
