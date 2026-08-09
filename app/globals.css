@@ -51,3 +51,100 @@
     background: radial-gradient(circle at top, #18181b 0%, #0a0a0b 100%);
   }
 }
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --paper: #f5f3ed;
+  --paper-alt: #efeae0;
+  --ink: #1a1f2b;
+  --ink-soft: #3a4150;
+  --muted: #6b7280;
+  --garnet: #9a3d3d;
+  --line: #d8d2c4;
+  --axis: #2f4858;
+}
+
+.dark {
+  --paper: #17171a;
+  --paper-alt: #1f1f23;
+  --ink: #ececea;
+  --ink-soft: #b8b8b4;
+  --muted: #8a8a86;
+  --garnet: #d38686;
+  --line: #2e2e32;
+  --axis: #6b8ba3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-paper: var(--paper);
+  --color-paper-alt: var(--paper-alt);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-garnet: var(--garnet);
+  --color-line: var(--line);
+  --color-axis: var(--axis);
+
+  --font-display: var(--font-playfair);
+}
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer utilities {
+  .fade-in-hidden {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-animate {
+    animation: fadeInUp 0.8s ease-out;
+  }
+}
+
+@layer base {
+  body {
+    background: radial-gradient(circle at top, #fafaf8 0%, #f2f1ee 100%);
+  }
+
+  .dark body {
+    background: radial-gradient(circle at top, #18181b 0%, #0a0a0b 100%);
+  }
+}

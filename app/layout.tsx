@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
+import { Fraunces } from "next/font/google";
 
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import "./globals.css";
@@ -11,8 +12,7 @@ import ThemeScript from "@/components/ThemeScript";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  style: ["italic"],
-  variable: "--font-playfair",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -48,3 +48,10 @@ export default function RootLayout({
     </html>
   );
 }
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
+});

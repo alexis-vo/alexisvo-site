@@ -26,9 +26,13 @@ export default function Hero() {
             Alexis VO
           </h1>
 
-          <p className="text-xl italic text-gray-600 dark:text-gray-300" style={{ fontFamily: "var(--font-playfair)" }}>
+          <p
+            className="text-xl italic text-gray-600 dark:text-gray-300"
+            style={{ fontFamily: "'Times New Roman', Times, serif" }}
+          >
             &quot;Shaping my future&quot;
           </p>
+
 
           <div className="mt-2 flex items-center gap-4">
             <button
