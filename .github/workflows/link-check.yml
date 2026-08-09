@@ -1,0 +1,30 @@
+name: Check for broken links
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Tous les lundis à 8h UTC — attrape les liens qui cassent
+    # après coup (repo supprimé, site externe qui change d'adresse...)
+    - cron: "0 8 * * 1"
+  workflow_dispatch: # permet de le lancer manuellement depuis GitHub
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lychee link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Scanne tous les fichiers de contenu : composants, pages, markdown
+          args: >
+            --verbose
+            --no-progress
+            --exclude-mail
+            --accept 200,201,202,203,204,301,302,307,308
+            './**/*.tsx' './**/*.ts' './**/*.md' './**/*.mdx'
+          fail: true # fait échouer le workflow si un lien est cassé

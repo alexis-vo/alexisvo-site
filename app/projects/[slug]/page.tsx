@@ -40,7 +40,7 @@ export default async function ProjectPage({
         href="/projects"
         className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
       >
-        ← Retour aux projets
+        ← Back to projects
       </Link>
 
       <div>
@@ -68,7 +68,7 @@ export default async function ProjectPage({
           rel="noopener noreferrer"
           className="text-sm font-medium text-black dark:text-white hover:underline w-fit"
         >
-          Voir le projet →
+          View project →
         </a>
       )}
 

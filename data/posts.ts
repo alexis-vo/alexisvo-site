@@ -32,4 +32,4 @@ export const posts: Post[] = [
     pdf: "/blog/analysis-oral-exam-mpsi.pdf",
     date: "2026-06-02",
   },
-];
+].sort((a, b) => b.date.localeCompare(a.date));

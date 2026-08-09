@@ -28,7 +28,6 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <span className="text-xs text-gray-400 dark:text-gray-500 mt-1">
         {new Date(project.date).toLocaleDateString("en-US", {
-          day: "numeric",
           month: "long",
           year: "numeric",
         })}
