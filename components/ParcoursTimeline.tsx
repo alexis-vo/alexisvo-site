@@ -61,7 +61,7 @@ const steps: Step[] = [
 ];
 
 export default function ParcoursTimeline() {
-  const [openId, setOpenId] = useState<string | null>("l3");
+  const [openId, setOpenId] = useState<string | null>("null");
 
   return (
     <section id="journey" className="px-6 md:px-20 py-20 max-w-4xl mx-auto">
