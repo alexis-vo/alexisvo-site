@@ -70,9 +70,7 @@ export default function ParcoursTimeline() {
           My Journey — Paris-Saclay Double Degree, 2023–2026
         </div>
         <h2
-          className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10"
-          style={{ fontFamily: "var(--font-playfair)", fontStyle: "normal" }}
-        >
+          className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
           Three years spent building my own method,
           <span className="italic"> not following someone else’s.</span>
         </h2>
