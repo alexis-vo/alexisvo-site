@@ -16,7 +16,9 @@ export default function CvPage() {
             My Resume
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
-            Preview below, or download directly as PDF.
+            Preview below, or download directly as PDF.<br></br>
+            Formatted with AI assistance from information I provided.<br></br>
+            All content reflects my actual experience and has been personally reviewed.
           </p>
         </div>
       </FadeIn>
