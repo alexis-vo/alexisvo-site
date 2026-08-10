@@ -11,7 +11,7 @@ export type Post = {
   date: string; // ISO : "2026-07-18"
 };
 
-export const posts: Post[] = [
+const rawPosts: Post[] = [
   {
     slug: "integration-methods",
     title: "Integration Methods: IBP, Partial Fractions, Bioche's Rules",
@@ -32,4 +32,6 @@ export const posts: Post[] = [
     pdf: "/blog/analysis-oral-exam-mpsi.pdf",
     date: "2026-06-02",
   },
-].sort((a, b) => b.date.localeCompare(a.date));
+];
+
+export const posts = rawPosts.sort((a, b) => b.date.localeCompare(a.date));

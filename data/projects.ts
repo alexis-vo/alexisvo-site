@@ -13,9 +13,7 @@ export type Project = {
   link?: string;
 };
 
-
-
-export const projects: Project[] = [
+const rawProjects: Project[] = [
   {
     slug: "blaise-alumni",
     category: "Personal project",
@@ -77,8 +75,7 @@ export const projects: Project[] = [
     slug: "jfp15",
     category: "Personal project",
     title: "Journées Franciliennes de la Programmation — 15th edition",
-    description:
-      "Image compression codecs. Ranked 4th out of 16 teams.",
+    description: "Image compression codecs. Ranked 4th out of 16 teams.",
     stack: ["Algorithms", "Data Compression", "Data Structures"],
     date: "2025-05",
     poster: "/posters/jfp15.pdf",
@@ -209,4 +206,6 @@ export const projects: Project[] = [
     poster: "/posters/rapport-projetMI.pdf",
     posterOrientation: "portrait",
   },
-].sort((a, b) => b.date.localeCompare(a.date));
+];
+
+export const projects = rawProjects.sort((a, b) => b.date.localeCompare(a.date));
