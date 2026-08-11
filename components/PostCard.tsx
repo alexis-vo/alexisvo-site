@@ -4,7 +4,8 @@ import { Post } from "@/data/posts";
 
 const categoryLabels: Record<string, string> = {
   "lecture-notes": "Lecture Notes",
-  colles: "Khôlle",
+  "colles": "Khôlle",
+  "method": "Method",
 };
 
 export default function PostCard({ post }: { post: Post }) {
