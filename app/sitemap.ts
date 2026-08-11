@@ -1,11 +1,11 @@
 // app/sitemap.ts
 import { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
-import { posts } from "@/data/posts";
+import { notes } from "@/data/notes";
 import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/projects", "/cv", "/contact", "/blog"].map(
+  const staticRoutes = ["", "/projects", "/cv", "/contact", "/notes"].map(
     (route) => ({
       url: `${SITE_URL}${route}`,
       lastModified: new Date(),
@@ -17,10 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const postRoutes = posts.map((post) => ({
-    url: `${SITE_URL}/blog/${post.slug}`,
+  const noteRoutes = notes.map((note) => ({
+    url: `${SITE_URL}/notes/${note.slug}`,
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...projectRoutes, ...postRoutes];
+  return [...staticRoutes, ...projectRoutes, ...noteRoutes];
 }
