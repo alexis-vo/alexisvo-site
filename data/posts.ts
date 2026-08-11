@@ -14,19 +14,19 @@ export type Post = {
 const rawPosts: Post[] = [
   {
     slug: "fiche-methode-calcul-integral",
-    title: "Fiche Méthode : Calcul intégral — Techniques d'intégration",
+    title: "Method Sheet: Integral Calculus — Integration Techniques",
     description:
-      "Fiche méthode complète sur les techniques d'intégration : primitives usuelles, intégration par parties, changements de variable, règles de Bioche, décomposition en éléments simples, intégrales impropres et techniques avancées (dérivation sous le signe intégrale, fonctions Gamma et Bêta).",
+      "Complete method sheet covering: standard antiderivatives, integration by parts, substitutions, Bioche’s rules, partial fraction decomposition, improper integrals, and advanced techniques such as differentiation under the integral sign and the Gamma and Beta functions.",
     category: "method",
-    subject: ["Mathématiques"],
+    subject: ["Mathematics"],
     pdf: "/blog/fiche_calcul_intégral.pdf",
     date: "2026-08-11",
   },
   {
     slug: "k0",
-    title: "Khôlle 0 - Grille d'évaluation",
+    title: "Khôlle 0 - Assessment criteria",
     description:
-      "Grille de critères utilisée pour l'évaluation lors des colles : présentation, rigueur du raisonnement, maîtrise du cours et qualité des réponses aux questions.",
+      "Assessment criteria used during oral examinations: presentation, rigor of reasoning, mastery of the course material, and quality of answers to questions.",
     category: "colles",
     subject: ["Mathematics"],
     pdf: "/blog/k0.pdf",
@@ -34,9 +34,9 @@ const rawPosts: Post[] = [
   },
   {
     slug: "k1",
-    title: "Khôlle 1 - Somme",
+    title: "Khôlle 1 - Sums",
     description:
-      "Somme arithmético-géométriques ; Coefficients binomiaux, formule de Vandermonde ; Identité de Lagrnage et inégalité de Cauchy-Schwarz",
+      "Arithmetico-geometric sums ; Binomial coefficients, Vandermonde’s identity ; Lagrange’s identity and the Cauchy–Schwarz inequality",
     category: "colles",
     subject: ["Mathematics"],
     pdf: "/blog/k1_suj.pdf",
@@ -44,7 +44,7 @@ const rawPosts: Post[] = [
   },
   {
     slug: "electricity-premiere",
-    title: "Electricity — Full Course",
+    title: "Electricity — Full Course in French",
     description:
       "Course notes on fundamental electrical quantities: charge, current, voltage, resistance, power, and energy.",
     category: "lecture-notes",

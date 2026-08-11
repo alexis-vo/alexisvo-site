@@ -5,7 +5,7 @@ import BlogList from "@/components/BlogList";
 export const metadata = {
   title: "Notes & Khôlles — Alexis Vo",
   description:
-    "Lecture notes and oral exam topics in mathematics, AI, and finance.",
+    "Lecture notes, tutorials, and practical sessions across all subjects at CentraleSupélec. Oral exam topics, exercise sheets, and method sheets are intended for my students. All materials are written in French.",
 };
 
 export default function BlogPage() {
