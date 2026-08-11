@@ -19,7 +19,7 @@ const rawPosts: Post[] = [
       "Complete method sheet covering: standard antiderivatives, integration by parts, substitutions, Bioche’s rules, partial fraction decomposition, improper integrals, and advanced techniques such as differentiation under the integral sign and the Gamma and Beta functions.",
     category: "method",
     subject: ["Mathematics"],
-    pdf: "/blog/fiche_calcul_intégral.pdf",
+    pdf: "/blog/met_int.pdf",
     date: "2026-08-11",
   },
   {

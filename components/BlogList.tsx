@@ -10,6 +10,7 @@ const tabs: { key: PostCategory | "all"; label: string }[] = [
   { key: "all", label: "All" },
   { key: "lecture-notes", label: "Lecture Notes" },
   { key: "colles", label: "Khôlles" },
+  { key: "method", label: "Method" },
 ];
 
 export default function BlogList({ posts }: { posts: Post[] }) {
