@@ -64,7 +64,7 @@ export default function ParcoursTimeline() {
   const [openId, setOpenId] = useState<string | null>("null");
 
   return (
-    <section id="journey" className="px-6 md:px-20 py-20 max-w-4xl mx-auto">
+    <section className="px-6 md:px-20 py-20 max-w-4xl mx-auto">
       <FadeIn>
         <div className="text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 mb-4">
           My Journey — Paris-Saclay Double Degree, 2023–2026

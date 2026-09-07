@@ -3,26 +3,36 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/#about", label: "About" },
-  { href: "/#journey", label: "Journey" },
-  { href: "/projects", label: "Projects" },
   { href: "/cv", label: "Resume" },
+  { href: "/journey", label: "Journey" },
+  { href: "/projects", label: "Projects" },
   { href: "/notes", label: "Notes" },
   { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  function handleLinkClick(href: string) {
+    setIsOpen(false);
+    if (href === "/" && pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-gray-100 dark:border-gray-800 px-6 md:px-20 py-5">
       <div className="flex justify-between items-center">
         <Link
           href="/"
+          onClick={() => handleLinkClick("/")}
           className="text-xl tracking-wide text-gray-900 dark:text-white"
           style={{ fontFamily: "var(--font-playfair)" }}
         >
@@ -34,6 +44,7 @@ export default function Nav() {
             <span key={link.href} className="flex items-center gap-6">
               <Link
                 href={link.href}
+                onClick={() => handleLinkClick(link.href)}
                 className="group relative text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
               >
                 {link.label}
@@ -86,7 +97,7 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={() => handleLinkClick(link.href)}
               className="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
               {link.label}

@@ -15,6 +15,15 @@ export type Project = {
 
 const rawProjects: Project[] = [
   {
+    slug: "quantlab",
+    category: "Personal project",
+    title: "QuantLab — Quantitative Portfolio Management Dashboard",
+    description:
+      "End-to-end quantitative finance pipeline: downloading historical market data, building and comparing multiple trading strategies (Buy & Hold, Momentum, Mean Reversion, Moving Average Crossover, Risk Parity, Equal Weight Portfolio), and computing key performance metrics — annual return, volatility, Sharpe ratio, Sortino ratio, maximum drawdown, Value at Risk, beta, and alpha — to produce a professional portfolio management report.",
+    stack: ["Python", "Quantitative Finance", "Portfolio Management", "Data Analysis"],
+    date: "2026-08",
+  },
+  {
     slug: "blaise-alumni",
     category: "Personal project",
     title: "Blaise Alumni Group",

@@ -47,13 +47,23 @@ const rawNotes: Note[] = [
   },
   {
     slug: "electricity-premiere",
-    title: "Electricity — Full Course in French",
+    title: "Electricity — Complet course for Première Générale",
     description:
-      "Course notes on fundamental electrical quantities: charge, current, voltage, resistance, power, and energy.",
+      "Course notes on fundamental electrical quantities: charge, current, voltage, resistance, power, and energy. Document generated with the assistance of AI based on the information I provided.",
     category: "Physics",
     tags: ["lecture-notes"],
     pdf: "/notes/cours_elec_premiere.pdf",
     date: "2026-08-10",
+  },
+  {
+    slug: "esp-ind-var",
+    title: "Method Sheet: Probability — Expectation, Independence, and Variance",
+    description:
+      "Method sheet covering the fundamentals of probability: expectation and its properties, independence of events and random variables, variance, covariance, and standard computation techniques. Document generated with the assistance of AI based on the information I provided.",
+    category: "Mathematics",
+    tags: ["method"],
+    pdf: "/notes/esp_var_ind.pdf",
+    date: "2026-08-12",
   },
 ];
 
