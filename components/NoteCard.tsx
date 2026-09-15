@@ -4,7 +4,7 @@ import { Note, NoteTag } from "@/data/notes";
 
 const tagLabels: Record<NoteTag, string> = {
   "lecture-notes": "Lecture Notes",
-  "colles": "Khôlle",
+  "colles": "Colles",
   "cheatsheet": "Cheatsheet",
 };
 
