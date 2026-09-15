@@ -4,8 +4,8 @@ import { Note, NoteTag } from "@/data/notes";
 
 const tagLabels: Record<NoteTag, string> = {
   "lecture-notes": "Lecture Notes",
-  colles: "Khôlle",
-  method: "Method",
+  "colles": "Khôlle",
+  "cheatsheet": "Cheatsheet",
 };
 
 export default function NoteCard({ note }: { note: Note }) {
