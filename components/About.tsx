@@ -21,8 +21,7 @@ export default function About() {
                 CentraleSupélec — General Engineering Program
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Admitted in first year, with a strong interest in quantitative
-                finance and data science.
+                Admitted in first year, with a strong interest in entrepreneurship, applied mathematics and AI.
               </p>
             </div>
           </div>
@@ -52,7 +51,7 @@ export default function About() {
             </span>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">
-                École Polytechnique
+                École polytechnique, IP Paris
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
                 - Quantitative finance at CMAP: modeling Black-Scholes, Monte Carlo, Cox-Ross-Rubinstein models<br />

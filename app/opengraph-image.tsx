@@ -55,7 +55,7 @@ export default function OpengraphImage() {
             maxWidth: 800,
           }}
         >
-          Quantitative Finance • AI • Financial Mathematics
+          Entrepreneurship • AI • Applied Mathematics
         </div>
       </div>
     ),

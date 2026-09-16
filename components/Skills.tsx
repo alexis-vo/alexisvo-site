@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 const skillGroups: { label: string; items: string[] }[] = [
   {
     label: "Languages",
-    items: ["Python", "OCaml", "C++", "C", "Java", "TypeScript"],
+    items: ["Python", "C/C++","OCaml", "SQL", "Java", "TypeScript"],
   },
   {
     label: "Web & Frameworks",
@@ -12,7 +12,7 @@ const skillGroups: { label: string; items: string[] }[] = [
   },
   {
     label: "Quantitative Finance & Data",
-    items: ["Quantitative Finance", "Deep Learning", "Data Analysis", "Pandas", "NumPy"],
+    items: ["Deep Learning", "Data Analysis", "Pandas", "NumPy"],
   },
   {
     label: "Algorithms & Theory",

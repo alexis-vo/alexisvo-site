@@ -10,10 +10,16 @@ export default function AboutMe() {
         </h2>
 
         <p className="text-base text-gray-600 dark:text-gray-300 text-left">
-          From a Dual Bachelor&apos;s in Mathematics and Computer Science at
-          Université Paris-Saclay to CentraleSupélec, including internships in
-          quantitative finance and data science at École Polytechnique.
+        Hello world!<br></br>
+        I’m someone who enjoys making good work with good people.<br></br>
+        I’m curious, dependable, and easy to work with.<br></br>
+        I take ownership, communicate clearly, and care about the details without losing sight of the bigger picture.<br></br>
+        I like solving real problems, learning as I go, and bringing a calm, practical energy to a team.<br></br>
+        This portfolio is a look at what I build, how I think, and the projects that have taught me the most.<br></br>
+        I recently enrolled at the CentraleSupélec engineering school after completing an intensive dual bachelor's degree in mathematics and computer science at Université Paris-Saclay (France).
         </p>
+        <br></br>
+        <p className="text-base text-gray-600 dark:text-gray-300 text-right"><i>Sic Parvis Magna</i></p>
       </FadeIn>
     </section>
   );
