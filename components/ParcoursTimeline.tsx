@@ -90,9 +90,9 @@ const steps: Step[] = [
     title: "Key Takeaways",
     badges: [],
     paragraphs: [
-      "Cette première partie de mes études supérieure se termine.\
-      Mais ce n'est qu'un chapitre qui se ferme et un nouveau qui s'ouvre.\
-      La route est encore longue, mais une chose est sûre, c'est que je l'ai choisie et j'en suis fier.",
+      "This first chapter of my higher education is coming to an end.\
+     But this is only one chapter closing and a new one beginning.\
+     The road ahead is still long, but one thing is certain: I chose it, and I am proud of it.",
       "For someone who is still deciding between a preparatory class and a double degree:\
       I would say that a preparatory class suits those who need a strong framework\
       and a teacher to structure their path whereas a double degree is better suited to those\
@@ -103,6 +103,9 @@ const steps: Step[] = [
       what is valued is consistency over time, rather than a final competitive exam decided over just a few weeks.\
       It is this emphasis on consistency, rather than performance under pure time pressure,\
       that has shaped the way I approach work today.",
+      "This does not mean that I cannot work efficiently under pressure and within a short timeframe.\
+      I do this sometimes, especially when working on demanding projects or during particularly busy weeks.\
+      I have simply learned how to learn quickly and, more importantly, how to understand things properly.",
       "If you're still on the fence, look into the CPES (Multidisciplinary Higher Education Program),\
       which are offered both in high school-like preparatory classes, and at the university level.\
       This could be a good compromise.",

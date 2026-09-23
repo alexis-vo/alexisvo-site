@@ -19,7 +19,15 @@ export default function AboutMe() {
         I recently enrolled at the CentraleSupélec engineering school after completing an intensive dual bachelor's degree in mathematics and computer science at Université Paris-Saclay (France).
         </p>
         <br></br>
-        <p className="text-base text-gray-600 dark:text-gray-300 text-right"><i>Sic Parvis Magna</i></p>
+        <p className="text-base text-gray-600 dark:text-gray-300 text-right">
+  <a
+    href="https://en.wikipedia.org/wiki/Francis_Drake"
+    target="_blank"
+    className="font-bold italic no-underline text-inherit"
+  >
+    Sic Parvis Magna
+  </a>
+</p>
       </FadeIn>
     </section>
   );

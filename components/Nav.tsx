@@ -13,6 +13,7 @@ const links = [
   { href: "/journey", label: "Journey" },
   { href: "/projects", label: "Projects" },
   { href: "/notes", label: "Notes" },
+  { href: "https://qcm.alexisvo.fr", target: "_blank", rel: "noopener noreferrer", label: "Revise" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -40,21 +41,36 @@ export default function Nav() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          {links.map((link, index) => (
-            <span key={link.href} className="flex items-center gap-6">
-              <Link
-                href={link.href}
-                onClick={() => handleLinkClick(link.href)}
-                className="group relative text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
-              >
-                {link.label}
-                <span className="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full" />
-              </Link>
-              {index < links.length - 1 && (
-                <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
-              )}
-            </span>
-          ))}
+          {links.map((link, index) => {
+            const isExternal = link.href.startsWith("http");
+            return (
+              <span key={link.href} className="flex items-center gap-6">
+                {isExternal ? (
+                  <a
+                    href={link.href}
+                    target={link.target}
+                    rel={link.rel}
+                    className="group relative text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                  >
+                    {link.label}
+                    <span className="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full" />
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    onClick={() => handleLinkClick(link.href)}
+                    className="group relative text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                  >
+                    {link.label}
+                    <span className="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                )}
+                {index < links.length - 1 && (
+                  <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
+                )}
+              </span>
+            );
+          })}
           <span className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
           <ThemeToggle />
         </nav>
@@ -93,16 +109,30 @@ export default function Nav() {
 
       {isOpen && (
         <nav className="md:hidden flex flex-col gap-4 mt-6 pb-2">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => handleLinkClick(link.href)}
-              className="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const isExternal = link.href.startsWith("http");
+            return isExternal ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.target}
+                rel={link.rel}
+                onClick={() => setIsOpen(false)}
+                className="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => handleLinkClick(link.href)}
+                className="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       )}
     </header>

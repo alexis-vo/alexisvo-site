@@ -29,6 +29,8 @@ export default function PersonSchema() {
       "Financial mathematics",
       "Artificial intelligence",
       "Quantitative finance",
+      "Mathematics",
+      "Computer Science"
     ],
   };
 
