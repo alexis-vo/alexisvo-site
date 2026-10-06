@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard";
 import FadeIn from "./FadeIn";
 
 const VISIBLE_TAGS_COUNT = 8;
-const categories: ProjectCategory[] = ["LDD1", "LDD2", "LDD3", "Personal project"];
+const categories: ProjectCategory[] = ["LDD1", "LDD2", "LDD3", "CS", "Personal project"];
 
 export default function ProjectsList({ projects }: { projects: Project[] }) {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | "all">("all");

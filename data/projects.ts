@@ -1,5 +1,5 @@
 // data/projects.ts
-export type ProjectCategory = "LDD1" | "LDD2" | "LDD3" | "Personal project";
+export type ProjectCategory = "LDD1" | "LDD2" | "LDD3" | "CS" | "Personal project";
 
 export type Project = {
   slug: string;
@@ -22,6 +22,22 @@ const rawProjects: Project[] = [
       "End-to-end quantitative finance pipeline: downloading historical market data, building and comparing multiple trading strategies (Buy & Hold, Momentum, Mean Reversion, Moving Average Crossover, Risk Parity, Equal Weight Portfolio), and computing key performance metrics — annual return, volatility, Sharpe ratio, Sortino ratio, maximum drawdown, Value at Risk, beta, and alpha — to produce a professional portfolio management report.",
     stack: ["Python", "Quantitative Finance", "Portfolio Management", "Data Analysis"],
     date: "2026-08",
+    link: "https://github.com/alexis-vo/QuantLab"
+  },
+  {
+    slug: "cryptography",
+    category: "CS",
+    title: "Security, Cryptography - Password Manager",
+    description:
+      "This lab focuses on cybersecurity fundamentals through the hands-on development of a secure command-line password manager.\
+      Drawing from recommendations by French security agencies (CNIL and ANSSI), the project covers three core topics:\
+      Password strength: evaluating and generating strong, randomized passwords based on entropy.\
+      Data encoding: understanding character encodings and handling binary data streams.\
+      Encryption & key derivation: protecting sensitive data using symmetric encryption (AES via Fernet)\
+      and deriving secure encryption keys from a master password using PBKDF2HMAC.",
+    stack: ["Python", "Cybersecurity", "Cryptography", "Password Management", "Information Systems"],
+    date: "2026-09",
+    link: "https://github.com/alexis-vo/sip/tree/main/TP5",
   },
   {
     slug: "blaise-alumni",

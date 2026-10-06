@@ -16,6 +16,57 @@ export type Note = {
 
 const rawNotes: Note[] = [
   {
+    slug: "carte-mentale-reseau-td1",
+    title: "Mindmap tutoral 1 - Networks",
+    description:
+      "A visual overview of the key concepts, protocols, and fundamentals covered in Network Tutorial 1.",
+    category: "Computer Science",
+    tags: ["cheatsheet"],
+    pdf: "/notes/mindmap_ResSec_TD1.pdf",
+    date: "2026-10-06",
+  },
+  {
+    slug: "fiche-methode-git",
+    title: "Git - Best Practices",
+    description:
+      "Essential Git commands, workflows, and best practices for efficient version control.",
+    category: "Computer Science",
+    tags: ["cheatsheet"],
+    pdf: "/notes/cheatsheet_git_bonnes_pratiques.pdf",
+    date: "2026-10-06",
+  },
+  {
+    slug: "fiche-methode-revisions-maths",
+    title: "How to revise in mathematics",
+    description:
+      "A practical guide to effective mathematics revision, from understanding concepts to practicing exercises and proofs.",
+    category: "Mathematics",
+    tags: ["cheatsheet"],
+    pdf: "/notes/cheatsheet_revision_mathematiques.pdf",
+    date: "2026-10-06",
+  },
+  {
+    slug: "fiche-methode-tribus-mesures",
+    title: "Building intuition for algebras and measures",
+    description:
+      "A conceptual guide to understanding algebras, measures, measurable sets, and their underlying intuition.",
+    category: "Mathematics",
+    tags: ["cheatsheet"],
+    pdf: "/notes/cheatsheet_tribu_mesure.pdf",
+    date: "2026-10-06",
+  },
+  {
+    slug: "correction-MR3",
+    title: "Exercise solutions - MR3",
+    description:
+      "Detailed solutions with key methods, explanations, and common mistakes to strengthen understanding and problem-solving skills.",
+    category: "Mathematics",
+    tags: ["lecture-notes"],
+    pdf: "/notes/cor_MR3.pdf",
+    date: "2026-10-06",
+  },
+
+  {
     slug: "fiche-methode-calcul-integral",
     title: "Method Sheet: Integral Calculus — Integration Techniques",
     description:

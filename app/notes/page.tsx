@@ -15,7 +15,7 @@ export default function NotesPage() {
         Notes & Colles
       </h1>
       <p className="text-gray-600 dark:text-gray-300 mb-12">
-        Lecture notes and oral exam topics in mathematics, AI, and finance.
+        Lecture notes, cheatsheets and oral exam topics in mathematics, computer science, and others.
       </p>
 
       <NotesList notes={notes} />
